@@ -1,0 +1,389 @@
+2019-11-16 14:26:22.441 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 14:26:22.733 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 14:26:22.789 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 14:26:22.798 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 14:26:22.807 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 14:26:22.817 -05:00 [INF] Hosting environment: Development
+2019-11-16 14:26:22.818 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 14:26:23.445 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/weatherforecast  
+2019-11-16 14:26:23.484 -05:00 [INF] Request finished in 42.1779ms 404 
+2019-11-16 14:33:46.536 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 14:33:46.818 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 14:33:46.863 -05:00 [INF] Now listening on: http://localhost:52504
+2019-11-16 14:33:46.865 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 14:33:46.866 -05:00 [INF] Hosting environment: Development
+2019-11-16 14:33:46.867 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 14:33:47.564 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:52504/  
+2019-11-16 14:33:47.591 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 14:33:47.630 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 14:33:47.688 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 14:33:47.696 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2456ms.
+2019-11-16 14:33:47.704 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 14:33:47.713 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 76.7365ms
+2019-11-16 14:33:47.715 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 14:33:47.718 -05:00 [INF] Request finished in 157.0336ms 200 application/json
+2019-11-16 14:33:48.025 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:52504/favicon.ico  
+2019-11-16 14:33:48.027 -05:00 [INF] Request finished in 1.624ms 404 
+2019-11-16 14:36:09.879 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 14:36:10.153 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 14:36:10.198 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 14:36:10.199 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 14:36:10.201 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 14:36:10.202 -05:00 [INF] Hosting environment: Development
+2019-11-16 14:36:10.203 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 14:36:10.744 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-16 14:36:10.774 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 14:36:10.821 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 14:36:10.876 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 14:36:10.883 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2255ms.
+2019-11-16 14:36:10.888 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 14:36:10.897 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 69.045ms
+2019-11-16 14:36:10.900 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 14:36:10.902 -05:00 [INF] Request finished in 160.4104ms 200 application/json
+2019-11-16 14:36:11.190 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2019-11-16 14:36:11.193 -05:00 [INF] Request finished in 3.2603ms 404 
+2019-11-16 14:36:23.019 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 14:36:23.027 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 14:36:23.047 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 14:36:23.189 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 14:36:25.348 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: '8b741785d0db4e15b760c58430a96cce', correlation id: 'f5d1f687f0a04570acd64f4c79d06658']
+2019-11-16 14:36:25.354 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 14:36:25.592 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 14:36:25.601 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 2551.5935ms
+2019-11-16 14:36:25.605 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 14:36:25.609 -05:00 [INF] Request finished in 2590.1369ms 500 application/json
+2019-11-16 14:57:25.890 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 14:57:56.876 -05:00 [FTL] Application startup exception
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=406, text='PRECONDITION_FAILED - inequivalent arg 'durable' for exchange 'team' in vhost '/': received 'true' but current is 'false'', classId=40, methodId=10
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.ModelRpc(MethodBase method, ContentHeaderBase header, Byte[] body)
+   at RabbitMQ.Client.Framing.Impl.Model._Private_ExchangeDeclare(String exchange, String type, Boolean passive, Boolean durable, Boolean autoDelete, Boolean internal, Boolean nowait, IDictionary`2 arguments)
+   at RabbitMQ.Client.Impl.ModelBase.ExchangeDeclare(String exchange, String type, Boolean durable, Boolean autoDelete, IDictionary`2 arguments)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.ExchangeDeclare(String exchange, String type, Boolean durable, Boolean autoDelete, IDictionary`2 arguments)
+   at Convey.MessageBrokers.RabbitMQ.Initializers.RabbitMqExchangeInitializer.InitializeAsync()
+   at Convey.Types.StartupInitializer.<>c.<InitializeAsync>b__2_0(IInitializer i)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at System.Threading.Tasks.Task.WhenAll(IEnumerable`1 tasks)
+   at Convey.Types.StartupInitializer.InitializeAsync()
+   at Convey.Extensions.UseInitializers(IApplicationBuilder builder)
+   at Teamjob.Services.Identity.Program.<>c.<CreateHostBuilder>b__2_2(IApplicationBuilder app) in C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity\Program.cs:line 72
+   at Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions.<>c__DisplayClass0_0.<Configure>b__0(WebHostBuilderContext _, IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_2.<Configure>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2019-11-16 14:58:15.095 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 14:58:47.402 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 14:59:45.982 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 14:59:48.718 -05:00 [FTL] Application startup exception
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=406, text='PRECONDITION_FAILED - inequivalent arg 'durable' for exchange 'team' in vhost '/': received 'true' but current is 'false'', classId=40, methodId=10
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.ModelRpc(MethodBase method, ContentHeaderBase header, Byte[] body)
+   at RabbitMQ.Client.Framing.Impl.Model._Private_ExchangeDeclare(String exchange, String type, Boolean passive, Boolean durable, Boolean autoDelete, Boolean internal, Boolean nowait, IDictionary`2 arguments)
+   at RabbitMQ.Client.Impl.ModelBase.ExchangeDeclare(String exchange, String type, Boolean durable, Boolean autoDelete, IDictionary`2 arguments)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.ExchangeDeclare(String exchange, String type, Boolean durable, Boolean autoDelete, IDictionary`2 arguments)
+   at Convey.MessageBrokers.RabbitMQ.Initializers.RabbitMqExchangeInitializer.InitializeAsync()
+   at Convey.Types.StartupInitializer.<>c.<InitializeAsync>b__2_0(IInitializer i)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at System.Threading.Tasks.Task.WhenAll(IEnumerable`1 tasks)
+   at Convey.Types.StartupInitializer.InitializeAsync()
+   at Convey.Extensions.UseInitializers(IApplicationBuilder builder)
+   at Teamjob.Services.Identity.Program.<>c.<CreateHostBuilder>b__2_2(IApplicationBuilder app) in C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity\Program.cs:line 72
+   at Microsoft.AspNetCore.Hosting.WebHostBuilderExtensions.<>c__DisplayClass0_0.<Configure>b__0(WebHostBuilderContext _, IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_2.<Configure>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2019-11-16 15:00:17.494 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 15:04:52.005 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 15:04:52.313 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 15:04:52.321 -05:00 [INF] Declaring a queue: 'teamjob.services.identity/test' with routing key: 'test' for exchange: 'team'.
+2019-11-16 15:04:52.401 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 15:04:52.403 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 15:04:52.404 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 15:04:52.405 -05:00 [INF] Hosting environment: Development
+2019-11-16 15:04:52.406 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 15:04:53.476 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-16 15:04:53.502 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:04:53.544 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 15:04:53.598 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 15:04:53.608 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.3042ms.
+2019-11-16 15:04:53.614 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 15:04:53.627 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 74.1977ms
+2019-11-16 15:04:53.630 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:04:53.633 -05:00 [INF] Request finished in 159.854ms 200 application/json
+2019-11-16 15:06:06.225 -05:00 [INF] Received a message with id: '', correlation id: '', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:06:06.338 -05:00 [ERR] Value cannot be null. (Parameter 'value')
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(IDistributedCache cache, String key, String value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Convey.MessageBrokers.RabbitMQ.Processors.DistributedMessageProcessor.TryProcessAsync(String id)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.UniqueMessagesPlugin.HandleAsync(Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.RabbitMqPluginsExecutor.ExecuteAsync(Func`4 successor, Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass15_0`1.<<Subscribe>b__0>d.MoveNext()
+2019-11-16 15:06:12.245 -05:00 [INF] Received a message with id: '', correlation id: '', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:06:12.250 -05:00 [ERR] Value cannot be null. (Parameter 'value')
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(IDistributedCache cache, String key, String value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Convey.MessageBrokers.RabbitMQ.Processors.DistributedMessageProcessor.TryProcessAsync(String id)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.UniqueMessagesPlugin.HandleAsync(Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.RabbitMqPluginsExecutor.ExecuteAsync(Func`4 successor, Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass15_0`1.<<Subscribe>b__0>d.MoveNext()
+2019-11-16 15:06:51.975 -05:00 [INF] Received a message with id: '', correlation id: '', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:06:51.979 -05:00 [ERR] Value cannot be null. (Parameter 'value')
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(IDistributedCache cache, String key, String value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Convey.MessageBrokers.RabbitMQ.Processors.DistributedMessageProcessor.TryProcessAsync(String id)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.UniqueMessagesPlugin.HandleAsync(Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.RabbitMqPluginsExecutor.ExecuteAsync(Func`4 successor, Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass15_0`1.<<Subscribe>b__0>d.MoveNext()
+2019-11-16 15:07:22.091 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 15:07:22.103 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 15:07:22.124 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 15:07:22.160 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 15:07:28.824 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: '35fdcdb8c5bc46489efe9c8959d52163', correlation id: 'e3c2231a45884ab0a505cb77765c6c59']
+2019-11-16 15:07:28.830 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 15:07:29.017 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 15:07:29.024 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 6896.549800000001ms
+2019-11-16 15:07:29.029 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 15:07:29.032 -05:00 [INF] Request finished in 6941.7349ms 500 application/json
+2019-11-16 15:07:47.335 -05:00 [INF] Received a message with id: '', correlation id: '', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:07:47.338 -05:00 [ERR] Value cannot be null. (Parameter 'value')
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(IDistributedCache cache, String key, String value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Convey.MessageBrokers.RabbitMQ.Processors.DistributedMessageProcessor.TryProcessAsync(String id)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.UniqueMessagesPlugin.HandleAsync(Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.RabbitMqPluginsExecutor.ExecuteAsync(Func`4 successor, Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass15_0`1.<<Subscribe>b__0>d.MoveNext()
+2019-11-16 15:09:09.383 -05:00 [INF] Received a message with id: '', correlation id: '', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:09:09.386 -05:00 [ERR] Value cannot be null. (Parameter 'value')
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(IDistributedCache cache, String key, String value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Convey.MessageBrokers.RabbitMQ.Processors.DistributedMessageProcessor.TryProcessAsync(String id)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.UniqueMessagesPlugin.HandleAsync(Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.RabbitMqPluginsExecutor.ExecuteAsync(Func`4 successor, Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass15_0`1.<<Subscribe>b__0>d.MoveNext()
+2019-11-16 15:09:44.805 -05:00 [INF] Received a message with id: '', correlation id: '', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:09:44.809 -05:00 [ERR] Value cannot be null. (Parameter 'value')
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(IDistributedCache cache, String key, String value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Convey.MessageBrokers.RabbitMQ.Processors.DistributedMessageProcessor.TryProcessAsync(String id)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.UniqueMessagesPlugin.HandleAsync(Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.RabbitMqPluginsExecutor.ExecuteAsync(Func`4 successor, Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass15_0`1.<<Subscribe>b__0>d.MoveNext()
+2019-11-16 15:13:16.200 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 15:13:16.492 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 15:13:16.500 -05:00 [INF] Declaring a queue: 'teamjob.services.identity/test' with routing key: 'test' for exchange: 'team'.
+2019-11-16 15:13:16.554 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 15:13:16.563 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 15:13:16.565 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 15:13:16.565 -05:00 [INF] Hosting environment: Development
+2019-11-16 15:13:16.566 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 15:13:17.108 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-16 15:13:17.134 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:13:17.171 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 15:13:17.220 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 15:13:17.228 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2589ms.
+2019-11-16 15:13:17.235 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 15:13:17.246 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 68.40690000000001ms
+2019-11-16 15:13:17.248 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:13:17.251 -05:00 [INF] Request finished in 144.94920000000002ms 200 application/json
+2019-11-16 15:15:04.111 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 15:15:04.414 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 15:15:04.422 -05:00 [INF] Declaring a queue: 'teamjob.services.identity/test' with routing key: 'test' for exchange: 'team'.
+2019-11-16 15:15:04.485 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 15:15:04.487 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 15:15:04.488 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 15:15:04.490 -05:00 [INF] Hosting environment: Development
+2019-11-16 15:15:04.491 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 15:15:05.007 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-16 15:15:05.032 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:15:05.069 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 15:15:05.125 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 15:15:05.133 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2611ms.
+2019-11-16 15:15:05.140 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 15:15:05.150 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 74.747ms
+2019-11-16 15:15:05.152 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:15:05.155 -05:00 [INF] Request finished in 151.11260000000001ms 200 application/json
+2019-11-16 15:15:12.138 -05:00 [INF] Received a message with id: '', correlation id: '', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:15:12.250 -05:00 [ERR] Value cannot be null. (Parameter 'value')
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.SetStringAsync(IDistributedCache cache, String key, String value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Convey.MessageBrokers.RabbitMQ.Processors.DistributedMessageProcessor.TryProcessAsync(String id)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.UniqueMessagesPlugin.HandleAsync(Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Plugins.RabbitMqPluginsExecutor.ExecuteAsync(Func`4 successor, Object message, Object correlationContext, BasicDeliverEventArgs args)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass15_0`1.<<Subscribe>b__0>d.MoveNext()
+2019-11-16 15:19:38.548 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 15:19:38.553 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 15:19:38.582 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 15:19:38.619 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 15:19:40.977 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: '903bd4b6489e4697bd206b183e5ba822', correlation id: 'eeb33a30bf1f45878799da9eede63fa2']
+2019-11-16 15:19:40.982 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 15:19:41.175 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 15:19:41.186 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 2601.6565ms
+2019-11-16 15:19:41.189 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 15:19:41.192 -05:00 [INF] Request finished in 2644.3635ms 500 application/json
+2019-11-16 15:29:52.640 -05:00 [INF] Received a message with id: '12345456', correlation id: '34534534534534t34', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:29:52.834 -05:00 [INF] Handling a message: 'Test' [id: '12345456'] with correlation id: '34534534534534t34'. 
+2019-11-16 15:32:28.184 -05:00 [INF] Received 'order created' event with order id: test
+2019-11-16 15:32:28.218 -05:00 [INF] Starting a delivery with id: 946f3016-6f9a-444f-919e-1495111b9ede
+2019-11-16 15:32:28.252 -05:00 [INF] Publishing a message with routing key: 'string' to exchange: 'identity' [id: '7001086ce7924b37ac17fffcb4d59b98', correlation id: '34534534534534t34']
+2019-11-16 15:32:29.617 -05:00 [ERR] Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host..
+System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.Write(Byte[] buffer)
+   at RabbitMQ.Client.Impl.Command.Transmit(Int32 channelNumber, Connection connection)
+   at RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   at RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, Byte[] body)
+   at RabbitMQ.Client.Framing.Impl.Model._Private_BasicPublish(String exchange, String routingKey, Boolean mandatory, IBasicProperties basicProperties, Byte[] body)
+   at RabbitMQ.Client.Impl.ModelBase.BasicPublish(String exchange, String routingKey, Boolean mandatory, IBasicProperties basicProperties, Byte[] body)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicPublish(String exchange, String routingKey, Boolean mandatory, IBasicProperties basicProperties, Byte[] body)
+   at Convey.MessageBrokers.RabbitMQ.Clients.RabbitMqClient.Send(Object message, IConventions conventions, String messageId, String correlationId, String spanContext, Object messageContext, IDictionary`2 headers)
+   at Convey.MessageBrokers.RabbitMQ.Publishers.RabbitMqPublisher.PublishAsync[T](T message, String messageId, String correlationId, String spanContext, Object messageContext, IDictionary`2 headers)
+   at Teamjob.Services.Identity.Events.External.Handlers.TestHandler.HandleAsync(Test event) in C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity\Events\External\Handlers\TestHandler.cs:line 46
+   at Convey.MessageBrokers.CQRS.Extensions.<>c__3`1.<SubscribeEvent>b__3_0(IServiceProvider sp, T event, Object ctx)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass16_0`1.<<TryHandleAsync>b__1>d.MoveNext()
+2019-11-16 15:32:31.648 -05:00 [INF] Handling a message: 'Test' [id: '12345456'] with correlation id: '34534534534534t34'. Retry: 1'.
+2019-11-16 15:32:39.448 -05:00 [INF] Received 'order created' event with order id: test
+2019-11-16 15:32:39.450 -05:00 [INF] Starting a delivery with id: cd838392-a18e-4002-b737-51f22803f443
+2019-11-16 15:32:39.452 -05:00 [INF] Publishing a message with routing key: 'string' to exchange: 'identity' [id: '531ba81fda2541068d710cabcc66ff01', correlation id: '34534534534534t34']
+2019-11-16 15:32:40.209 -05:00 [ERR] Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host..
+System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.Write(Byte[] buffer)
+   at RabbitMQ.Client.Impl.Command.Transmit(Int32 channelNumber, Connection connection)
+   at RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   at RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, Byte[] body)
+   at RabbitMQ.Client.Framing.Impl.Model._Private_BasicPublish(String exchange, String routingKey, Boolean mandatory, IBasicProperties basicProperties, Byte[] body)
+   at RabbitMQ.Client.Impl.ModelBase.BasicPublish(String exchange, String routingKey, Boolean mandatory, IBasicProperties basicProperties, Byte[] body)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicPublish(String exchange, String routingKey, Boolean mandatory, IBasicProperties basicProperties, Byte[] body)
+   at Convey.MessageBrokers.RabbitMQ.Clients.RabbitMqClient.Send(Object message, IConventions conventions, String messageId, String correlationId, String spanContext, Object messageContext, IDictionary`2 headers)
+   at Convey.MessageBrokers.RabbitMQ.Publishers.RabbitMqPublisher.PublishAsync[T](T message, String messageId, String correlationId, String spanContext, Object messageContext, IDictionary`2 headers)
+   at Teamjob.Services.Identity.Events.External.Handlers.TestHandler.HandleAsync(Test event) in C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity\Events\External\Handlers\TestHandler.cs:line 46
+   at Convey.MessageBrokers.CQRS.Extensions.<>c__3`1.<SubscribeEvent>b__3_0(IServiceProvider sp, T event, Object ctx)
+   at Convey.MessageBrokers.RabbitMQ.Subscribers.RabbitMqSubscriber.<>c__DisplayClass16_0`1.<<TryHandleAsync>b__1>d.MoveNext()
+2019-11-16 15:32:40.222 -05:00 [INF] Received a message with id: '12345456', correlation id: '34534534534534t34', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:32:40.223 -05:00 [ERR] Unable to handle a message: 'Test' [id: '12345456'] with correlation id: '34534534534534t34', retry 1/3...
+2019-11-16 15:32:42.227 -05:00 [INF] Handling a message: 'Test' [id: '12345456'] with correlation id: '34534534534534t34'. Retry: 2'.
+2019-11-16 15:32:50.023 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 15:32:50.317 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 15:32:50.325 -05:00 [INF] Declaring a queue: 'teamjob.services.identity/test' with routing key: 'test' for exchange: 'team'.
+2019-11-16 15:32:50.345 -05:00 [INF] Received a message with id: '12345456', correlation id: '34534534534534t34', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:32:50.400 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 15:32:50.410 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 15:32:50.412 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 15:32:50.413 -05:00 [INF] Hosting environment: Development
+2019-11-16 15:32:50.415 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 15:32:50.512 -05:00 [INF] Handling a message: 'Test' [id: '12345456'] with correlation id: '34534534534534t34'. 
+2019-11-16 15:33:03.029 -05:00 [INF] Received 'order created' event with order id: test
+2019-11-16 15:33:03.030 -05:00 [INF] Starting a delivery with id: 2d478df2-8500-4371-8f84-abba5f738253
+2019-11-16 15:33:03.070 -05:00 [INF] Publishing a message with routing key: 'string' to exchange: 'identity' [id: 'ed68a252a8bb4ce8b5e60bfa57d23e86', correlation id: '34534534534534t34']
+2019-11-16 15:33:03.076 -05:00 [INF] Handled a message: 'Test' [id: '12345456'] with correlation id: '34534534534534t34'. 
+2019-11-16 15:33:03.079 -05:00 [INF] Received a message with id: 'ddb4b356-a15e-4246-b796-512f1d4d622e', correlation id: '2dde67f4-6d38-4488-bb85-e2c23bb00a31', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:33:03.081 -05:00 [INF] Handling a message: 'Test' [id: 'ddb4b356-a15e-4246-b796-512f1d4d622e'] with correlation id: '2dde67f4-6d38-4488-bb85-e2c23bb00a31'. 
+2019-11-16 15:33:03.666 -05:00 [INF] Received 'order created' event with order id: test
+2019-11-16 15:33:03.667 -05:00 [INF] Starting a delivery with id: bbf21308-279c-4d8c-9b06-ef30613fa34f
+2019-11-16 15:33:03.669 -05:00 [INF] Publishing a message with routing key: 'string' to exchange: 'identity' [id: 'a66f53c796864c6ebc3bc302b40bbf92', correlation id: '2dde67f4-6d38-4488-bb85-e2c23bb00a31']
+2019-11-16 15:33:03.670 -05:00 [INF] Handled a message: 'Test' [id: 'ddb4b356-a15e-4246-b796-512f1d4d622e'] with correlation id: '2dde67f4-6d38-4488-bb85-e2c23bb00a31'. 
+2019-11-16 15:33:03.672 -05:00 [INF] Received a message with id: 'a404bb1f-6bbf-4559-ade9-832e2d48b0ca', correlation id: '9bd0abb5-f391-42cb-95e8-c4be1be49c26', timestamp: 0 [queue: 'teamjob.services.identity/test', routing key: 'test', exchange: 'team'].
+2019-11-16 15:33:03.674 -05:00 [INF] Handling a message: 'Test' [id: 'a404bb1f-6bbf-4559-ade9-832e2d48b0ca'] with correlation id: '9bd0abb5-f391-42cb-95e8-c4be1be49c26'. 
+2019-11-16 15:33:05.251 -05:00 [INF] Received 'order created' event with order id: test
+2019-11-16 15:33:05.253 -05:00 [INF] Starting a delivery with id: daea3986-4488-4d09-a0f4-14c1280b5964
+2019-11-16 15:33:05.256 -05:00 [INF] Publishing a message with routing key: 'string' to exchange: 'identity' [id: 'bff442f5edc244098db51924a580b690', correlation id: '9bd0abb5-f391-42cb-95e8-c4be1be49c26']
+2019-11-16 15:33:05.259 -05:00 [INF] Handled a message: 'Test' [id: 'a404bb1f-6bbf-4559-ade9-832e2d48b0ca'] with correlation id: '9bd0abb5-f391-42cb-95e8-c4be1be49c26'. 
+2019-11-16 15:33:05.335 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-16 15:33:05.361 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:33:05.382 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 15:33:05.436 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 15:33:05.443 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.29700000000000004ms.
+2019-11-16 15:33:05.451 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 15:33:05.462 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 71.5126ms
+2019-11-16 15:33:05.465 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 15:33:05.469 -05:00 [INF] Request finished in 136.3106ms 200 application/json
+2019-11-16 16:12:24.521 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 16:12:24.774 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 16:12:24.820 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 16:12:24.821 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 16:12:24.823 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 16:12:24.824 -05:00 [INF] Hosting environment: Development
+2019-11-16 16:12:24.824 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 16:12:25.800 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-16 16:12:25.828 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 16:12:25.869 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 16:12:25.923 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 16:12:25.931 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.22560000000000002ms.
+2019-11-16 16:12:25.936 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 16:12:25.947 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 70.7899ms
+2019-11-16 16:12:25.952 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 16:12:25.955 -05:00 [INF] Request finished in 157.982ms 200 application/json
+2019-11-16 16:12:51.894 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 16:12:51.899 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:12:51.919 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 16:12:52.053 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 16:12:54.421 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: 'e853d903003f487cbdd4e152b3768ae2', correlation id: '243a2c0ad4914c0cb54a9bb3c269d8f1']
+2019-11-16 16:12:54.427 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 16:12:54.683 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 16:12:54.692 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 2769.1796ms
+2019-11-16 16:12:54.695 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:12:54.697 -05:00 [INF] Request finished in 2803.0451000000003ms 500 application/json
+2019-11-16 16:14:01.597 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 16:14:01.603 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:14:01.607 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 16:14:01.640 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 16:14:04.883 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: 'f3dbecda18c244beafb0919916490c2c', correlation id: 'ae8b9105107c4c7c9a6a602e17285f60']
+2019-11-16 16:14:04.884 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 16:14:05.020 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 16:14:05.030 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 3419.3764ms
+2019-11-16 16:14:05.032 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:14:05.034 -05:00 [INF] Request finished in 3437.7844ms 500 application/json
+2019-11-16 16:15:00.676 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 16:15:00.678 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:15:00.680 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 16:15:00.707 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 16:15:07.441 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: 'f0edf9cc58f24b5facd6a492db089f54', correlation id: '8f80d28eef4540d4bb3b385f8ce2b142']
+2019-11-16 16:15:07.443 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 16:15:07.578 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 16:15:07.581 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 6896.9885ms
+2019-11-16 16:15:07.582 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:15:07.584 -05:00 [INF] Request finished in 6907.8705ms 500 application/json
+2019-11-16 16:24:46.184 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 16:24:46.185 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:24:46.188 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 16:24:46.218 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 16:24:46.242 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: 'f0ad9c41b6464c60870b3d1a72e6af81', correlation id: 'c26aedd9df844b4f91b3e23b4b951d60']
+2019-11-16 16:24:46.244 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 16:24:46.381 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 16:24:46.383 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 191.3889ms
+2019-11-16 16:24:46.385 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 16:24:46.387 -05:00 [INF] Request finished in 203.7484ms 500 application/json
+2019-11-16 17:30:51.060 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-16 17:30:51.337 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-16 17:30:51.402 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-16 17:30:51.410 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-16 17:30:51.412 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-16 17:30:51.413 -05:00 [INF] Hosting environment: Development
+2019-11-16 17:30:51.414 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-16 17:30:52.209 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-16 17:30:52.236 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 17:30:52.258 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-16 17:30:52.313 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 17:30:52.319 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2141ms.
+2019-11-16 17:30:52.326 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-16 17:30:52.335 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 70.1678ms
+2019-11-16 17:30:52.339 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-16 17:30:52.344 -05:00 [INF] Request finished in 136.9382ms 200 application/json
+2019-11-16 17:30:57.050 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/login application/json 72
+2019-11-16 17:30:57.062 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 17:30:57.081 -05:00 [INF] Route matched with {action = "Login", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Teamjob.Services.Identity.Requests.Login) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-11-16 17:30:57.224 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-16 17:30:57.925 -05:00 [INF] Publishing a message with routing key: 'login_rejected' to exchange: 'identity' [id: '7c9c4d89c7a8497799e9ad73e81e3621', correlation id: '0a7b06e79a094fc0b4941dcb4a744ea2']
+2019-11-16 17:30:57.930 -05:00 [INF] Login for email : [adam.letourneau1993@gmail.com] rejected with reason : Invalid credentials
+2019-11-16 17:30:58.174 -05:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`2[[System.String[], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-11-16 17:30:58.183 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity) in 1099.3609000000001ms
+2019-11-16 17:30:58.186 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Login (Teamjob.Services.Identity)'
+2019-11-16 17:30:58.189 -05:00 [INF] Request finished in 1139.9095ms 500 application/json
