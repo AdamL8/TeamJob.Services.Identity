@@ -1,0 +1,19 @@
+2019-11-21 19:58:51.684 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-11-21 19:58:52.029 -05:00 [INF] Declaring an exchange: 'identity',type: 'topic'.
+2019-11-21 19:58:52.145 -05:00 [INF] Now listening on: https://localhost:5001
+2019-11-21 19:58:52.154 -05:00 [INF] Now listening on: http://localhost:5000
+2019-11-21 19:58:52.156 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-11-21 19:58:52.157 -05:00 [INF] Hosting environment: Development
+2019-11-21 19:58:52.158 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-11-21 19:58:54.239 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-11-21 19:58:54.281 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-21 19:58:54.354 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-11-21 19:58:54.448 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-11-21 19:58:54.458 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.5268ms.
+2019-11-21 19:58:54.464 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-11-21 19:58:54.478 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 113.7325ms
+2019-11-21 19:58:54.481 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-11-21 19:58:54.484 -05:00 [INF] Request finished in 247.6063ms 200 application/json
+2019-11-21 19:58:56.187 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2019-11-21 19:58:56.190 -05:00 [INF] Request finished in 3.5265ms 404 
+2019-11-21 19:59:29.179 -05:00 [INF] Application is shutting down...
