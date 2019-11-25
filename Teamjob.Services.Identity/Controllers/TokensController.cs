@@ -13,7 +13,7 @@ namespace Teamjob.Services.Identity.Controllers
     [ApiController]
     [JwtAuth]
     [Route("api/[controller]")]
-    public class TokensController : ControllerBase
+    public class TokensController : BaseController
     {
         private readonly ICommandDispatcher _commandDispatcher;
         private readonly IRequestDispatcher _requestDispatcher;
@@ -35,7 +35,7 @@ namespace Teamjob.Services.Identity.Controllers
         {
             await _commandDispatcher.SendAsync(InCommand);
 
-            return CreatedAtAction(nameof(RevokeAccessToken), new { userId = InCommand.UserId, token = InCommand.Token }, new object());
+            return CreatedAtAction(nameof(RevokeAccessToken), InCommand.UserId, new { userId = InCommand.UserId, token = InCommand.Token });
         }
 
         [HttpPost("refresh-tokens/{InRefreshToken}/revoke")]
@@ -43,7 +43,7 @@ namespace Teamjob.Services.Identity.Controllers
         {
             await _commandDispatcher.SendAsync(InCommand.Bind(c => c.Token, InRefreshToken));
 
-            return CreatedAtAction(nameof(RevokeRefreshToken), new { userId = InCommand.UserId, token = InCommand.Token }, new object());
+            return CreatedAtAction(nameof(RevokeRefreshToken), InCommand.UserId, new { userId = InCommand.UserId, token = InCommand.Token });
         }
     }
 }

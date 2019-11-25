@@ -5,9 +5,9 @@ namespace Teamjob.Services.Identity.Commands
 {
     public class Register : ICommand
     {
-        public string Email    { get; set;  }
-        public string Password { get; set; }
-        public string Role     { get; set;  }
+        public string Email    { get; }
+        public string Password { get; }
+        public string Role     { get; }
 
         [JsonConstructor]
         public Register(string email, string password, string role)

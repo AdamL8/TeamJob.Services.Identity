@@ -10,7 +10,7 @@ namespace Teamjob.Services.Identity.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class IdentityController : ControllerBase
+    public class IdentityController : BaseController
     {
         private readonly ICommandDispatcher _commandDispatcher;
         private readonly IRequestDispatcher _requestDispatcher;
@@ -23,13 +23,11 @@ namespace Teamjob.Services.Identity.Controllers
         }
 
         // POST api/identity/login
-
         [HttpPost("login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Login([FromBody]Login InCommand)
         {
-
             return Ok(await _requestDispatcher.DispatchAsync<Login, string>(InCommand));
         }
 
@@ -38,9 +36,13 @@ namespace Teamjob.Services.Identity.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Register([FromBody]Register InCommand)
         {
+            //if (!ModelState.IsValid)
+            //{
+            //    return CreatedAtAction(nameof(Register), new { email = InCommand.Email }, new object());
+            //}
             await _commandDispatcher.SendAsync(InCommand);
 
-            return CreatedAtAction(nameof(Register), new { email = InCommand.Email }, new object());
+            return CreatedAtAction(nameof(Register), string.Empty, new { email = InCommand.Email });
         }
     }
 }

@@ -4,17 +4,22 @@ using Convey.CQRS.Commands;
 using Convey.CQRS.Events;
 using Convey.CQRS.Queries;
 using Convey.Logging;
+using Convey.MessageBrokers.CQRS;
 using Convey.MessageBrokers.RabbitMQ;
 using Convey.Persistence.MongoDB;
 using Convey.WebApi;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading.Tasks;
+using Teamjob.Services.Identity.Commands.Validations;
 using Teamjob.Services.Identity.Domain;
+using Teamjob.Services.Identity.Events.External;
 using Teamjob.Services.Identity.Filters;
 
 namespace Teamjob.Services.Identity
@@ -31,30 +36,33 @@ namespace Teamjob.Services.Identity
                 webBuilder.ConfigureServices(services =>
                 {
                     services.AddTransient(typeof(IPasswordHasher<User>), typeof(PasswordHasher<User>));
+                    services.AddDistributedMemoryCache();
+
                     services.AddCors(options =>
                     {
                         options.AddPolicy("CorsPolicy", builder =>
-                                builder
-                                //builder.AllowAnyOrigin()
-                                //       .AllowAnyMethod()
-                                //       .AllowAnyHeader()
-                                       .AllowCredentials()
+                                builder.AllowCredentials()
                                        .WithExposedHeaders(Headers));
                     });
-                    services.AddDistributedMemoryCache();
+
                     services.AddMvc(options =>
                     {
                         options.Filters.Add(typeof(CustomExceptionFilterAttribute));
+                        options.Filters.Add(typeof(ValidatorActionFilter));
 
-                    }); 
+                    }).AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<RegisterValidator>());
+
+                    services.Configure<ApiBehaviorOptions>(options =>
+                    {
+                        options.SuppressModelStateInvalidFilter = true;
+                    });
 
                     services.AddConvey()
                         .AddWebApi()
-                        .AddCommandHandlers()
-                        .AddInMemoryCommandDispatcher()
                         .AddMongo()
                         .AddMongoRepository<User,         Guid>("Users")
                         .AddMongoRepository<RefreshToken, Guid>("RefreshTokens")
+                        .AddCommandHandlers()
                         .AddEventHandlers()
                         .AddQueryHandlers()
                         .AddInMemoryCommandDispatcher()
@@ -72,7 +80,8 @@ namespace Teamjob.Services.Identity
                         .UseAllForwardedHeaders()
                         .UseRouting()
                         .UseEndpoints(r => r.MapControllers())
-                        .UseRabbitMq())
+                        .UseRabbitMq()
+                        .SubscribeEvent<ProfileDeleted>())
                     .UseLogging();
             });
     }

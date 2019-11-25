@@ -43,9 +43,9 @@ namespace Teamjob.Services.Identity.Commands.Handlers
 
             var role = Role.User;
 
-            if (Enum.TryParse(typeof(Role), InCommand.Role, out object result))
+            if (Enum.TryParse(InCommand.Role, out Role result))
             {
-                role = (Role)result;
+                role = result;
             }
 
             user = new User(Guid.NewGuid(), InCommand.Email, role);
