@@ -36,10 +36,6 @@ namespace Teamjob.Services.Identity.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Register([FromBody]Register InCommand)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return CreatedAtAction(nameof(Register), new { email = InCommand.Email }, new object());
-            //}
             await _commandDispatcher.SendAsync(InCommand);
 
             return CreatedAtAction(nameof(Register), string.Empty, new { email = InCommand.Email });
