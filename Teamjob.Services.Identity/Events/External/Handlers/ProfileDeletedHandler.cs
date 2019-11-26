@@ -31,7 +31,7 @@ namespace Teamjob.Services.Identity.Events.External.Handlers
 
         public async Task HandleAsync(ProfileDeleted InEvent)
         {
-            var user = await _userRepository.GetAsync(x => x.Id == InEvent.ProfileId);
+            var user = await _userRepository.GetAsync(InEvent.ProfileId);
             if (user is null)
             {
                 _logger.LogInformation($"Cannot delete User with ID : [{InEvent.ProfileId}] because it doesn't exist");
