@@ -2,6 +2,7 @@
 using Convey.MessageBrokers;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace Teamjob.Services.Identity.Events.External
 {
@@ -9,11 +10,13 @@ namespace Teamjob.Services.Identity.Events.External
     public class ProfileDeleted : IEvent
     {
         public Guid ProfileId { get; }
+        public List<Guid> Teams { get; }
 
         [JsonConstructor]
-        public ProfileDeleted(Guid profileId)
+        public ProfileDeleted(Guid profileId, List<Guid> teams)
         {
             ProfileId = profileId;
+            Teams     = teams;
         }
     }
 }
