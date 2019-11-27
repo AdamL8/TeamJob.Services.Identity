@@ -74,7 +74,7 @@ namespace Teamjob.Services.Identity
                 }) 
                     .Configure(app => app
                         .UseAuthentication()
-                        .UseInitializers()
+                        .UseConvey()
                         .UseErrorHandler()
                         .UseCors("CorsPolicy")
                         .UseAllForwardedHeaders()
