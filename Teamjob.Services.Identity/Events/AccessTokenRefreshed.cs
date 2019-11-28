@@ -6,12 +6,12 @@ namespace Teamjob.Services.Identity.Events
 {
     public class AccessTokenRefreshed : IEvent
     {
-        public Guid UserId { get; }
+        public Guid Id { get; }
 
         [JsonConstructor]
-        public AccessTokenRefreshed(Guid userId)
+        public AccessTokenRefreshed(Guid id)
         {
-            UserId = userId;
+            Id = id;
         }
     }
 }

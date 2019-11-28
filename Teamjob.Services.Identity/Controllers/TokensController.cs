@@ -35,7 +35,7 @@ namespace Teamjob.Services.Identity.Controllers
         {
             await _commandDispatcher.SendAsync(InCommand);
 
-            return CreatedAtAction(nameof(RevokeAccessToken), InCommand.UserId, new { userId = InCommand.UserId, token = InCommand.Token });
+            return CreatedAtAction(nameof(RevokeAccessToken), InCommand.Id, new { userId = InCommand.Id, token = InCommand.Token });
         }
 
         [HttpPost("refresh-tokens/{InRefreshToken}/revoke")]
@@ -43,7 +43,7 @@ namespace Teamjob.Services.Identity.Controllers
         {
             await _commandDispatcher.SendAsync(InCommand.Bind(c => c.Token, InRefreshToken));
 
-            return CreatedAtAction(nameof(RevokeRefreshToken), InCommand.UserId, new { userId = InCommand.UserId, token = InCommand.Token });
+            return CreatedAtAction(nameof(RevokeRefreshToken), InCommand.Id, new { userId = InCommand.Id, token = InCommand.Token });
         }
     }
 }

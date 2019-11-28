@@ -6,13 +6,13 @@ namespace Teamjob.Services.Identity.Commands
 {
     public class RevokeAccessToken : ICommand
     {
-        public Guid UserId  { get; }
+        public Guid Id      { get; }
         public string Token { get; }
 
         [JsonConstructor]
-        public RevokeAccessToken(Guid userId, string token)
+        public RevokeAccessToken(Guid id, string token)
         {
-            UserId = userId;
+            Id     = id;
             Token  = token;
         }
     }

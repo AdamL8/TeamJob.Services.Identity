@@ -8,12 +8,12 @@ namespace Teamjob.Services.Identity.Events
 {
     public class RefreshAccessTokenRejected : IEvent
     {
-        public Guid UserId   { get; }
+        public Guid Id       { get; }
         public string Reason { get; }
 
-        public RefreshAccessTokenRejected(Guid userId, string reason)
+        public RefreshAccessTokenRejected(Guid id, string reason)
         {
-            UserId = userId;
+            Id     = id;
             Reason = reason;
         }
     }

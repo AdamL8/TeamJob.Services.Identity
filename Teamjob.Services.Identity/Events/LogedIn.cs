@@ -6,12 +6,12 @@ namespace Teamjob.Services.Identity.Events
 {
     public class LogedIn : IEvent 
     {
-        public Guid UserId { get; }
+        public Guid Id { get; }
 
         [JsonConstructor]
-        public LogedIn(Guid userId)
+        public LogedIn(Guid id)
         {
-            UserId = userId;
+            Id = id;
         }
     }
 }

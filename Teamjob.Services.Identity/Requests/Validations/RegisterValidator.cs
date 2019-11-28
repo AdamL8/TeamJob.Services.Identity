@@ -1,11 +1,7 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace Teamjob.Services.Identity.Commands.Validations
+namespace Teamjob.Services.Identity.Requests.Validations
 {
     public class RegisterValidator : AbstractValidator<Register>
     {
