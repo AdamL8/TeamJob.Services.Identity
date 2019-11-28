@@ -41,7 +41,8 @@ namespace Teamjob.Services.Identity
                     services.AddCors(options =>
                     {
                         options.AddPolicy("CorsPolicy", builder =>
-                                builder.AllowCredentials()
+                                builder.AllowAnyOrigin()
+                                       .AllowAnyMethod()
                                        .WithExposedHeaders(Headers));
                     });
 
