@@ -59,7 +59,7 @@ namespace Teamjob.Services.Identity.Requests
             _logger.LogInformation($"Logged in User with ID : {user.Id} and Email : {InRequest.Email}. JWT : {jwt.AccessToken}");
             await _busPublisher.PublishAsync(new LogedIn(user.Id));
 
-            return new LoginInfo(user.Id, jwt.AccessToken, user.Role.ToString());
+            return new LoginInfo { Id = user.Id, AccessToken = jwt.AccessToken, Role = user.Role.ToString() };
         }
     }
 }

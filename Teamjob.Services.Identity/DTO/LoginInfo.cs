@@ -1,20 +1,11 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 
 namespace Teamjob.Services.Identity.DTO
 {
     public class LoginInfo
     {
-        public Guid Id            { get; private set; }
-        public string AccessToken { get; private set; }
-        public string Role        { get; private set; }
-
-        [JsonConstructor]
-        public LoginInfo(Guid id, string accessToken, string role)
-        {
-            Id          = id;
-            AccessToken = accessToken;
-            Role        = role;
-        }
+        public Guid Id            { get; set; }
+        public string AccessToken { get; set; }
+        public string Role        { get; set; }
     }
 }

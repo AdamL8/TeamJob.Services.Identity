@@ -65,7 +65,7 @@ namespace Teamjob.Services.Identity.Requests.Handlers
 
             await _busPublisher.PublishAsync(new Registered(user.Id, InCommand.Email, user.Role.ToString()));
 
-            return new LoginInfo(user.Id, jwt.AccessToken, user.Role.ToString());
+            return new LoginInfo { Id = user.Id, AccessToken = jwt.AccessToken, Role = user.Role.ToString() };
         }
     }
 }
