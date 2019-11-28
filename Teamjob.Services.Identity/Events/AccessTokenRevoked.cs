@@ -6,12 +6,12 @@ namespace Teamjob.Services.Identity.Events
 {
     public class AccessTokenRevoked : IEvent
     {
-        public Guid UserId { get; }
+        public Guid Id { get; }
 
         [JsonConstructor]
-        public AccessTokenRevoked(Guid userId)
+        public AccessTokenRevoked(Guid id)
         {
-            UserId = userId;
+            Id = id;
         }
     }
 }

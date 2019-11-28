@@ -9,14 +9,14 @@ namespace Teamjob.Services.Identity.Events.External
     [Message(exchange: "profile", external: true)]
     public class ProfileDeleted : IEvent
     {
-        public Guid ProfileId { get; }
+        public Guid Id { get; }
         public List<Guid> Teams { get; }
 
         [JsonConstructor]
-        public ProfileDeleted(Guid profileId, List<Guid> teams)
+        public ProfileDeleted(Guid id, List<Guid> teams)
         {
-            ProfileId = profileId;
-            Teams     = teams;
+            Id    = id;
+            Teams = teams;
         }
     }
 }

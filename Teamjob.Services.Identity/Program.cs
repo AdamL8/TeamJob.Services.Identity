@@ -17,10 +17,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading.Tasks;
-using Teamjob.Services.Identity.Commands.Validations;
 using Teamjob.Services.Identity.Domain;
 using Teamjob.Services.Identity.Events.External;
 using Teamjob.Services.Identity.Filters;
+using Teamjob.Services.Identity.Requests.Validations;
 
 namespace Teamjob.Services.Identity
 {

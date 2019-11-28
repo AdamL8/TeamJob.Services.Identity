@@ -1,9 +1,14 @@
 ﻿using Convey.CQRS.Commands;
+using Convey.WebApi.Requests;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Teamjob.Services.Identity.Commands
+namespace Teamjob.Services.Identity.Requests
 {
-    public class Register : ICommand
+    public class Register : IRequest
     {
         public string Email    { get; }
         public string Password { get; }
