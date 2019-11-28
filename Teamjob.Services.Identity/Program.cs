@@ -26,7 +26,7 @@ namespace Teamjob.Services.Identity
 {
     public class Program
     {
-        private static readonly string[] Headers = new[] { "X-Operation", "X-Resource", "X-Total-Count" };
+        private static readonly string[] Headers = new[] { "X-Operation", "X-Resource", "X-Total-Count", "Content-Type" };
         public static Task Main(string[] args)
                     => CreateHostBuilder(args).Build().RunAsync();
 
@@ -43,7 +43,7 @@ namespace Teamjob.Services.Identity
                         options.AddPolicy("CorsPolicy", builder =>
                                 builder.AllowAnyOrigin()
                                        .AllowAnyMethod()
-                                       .WithExposedHeaders(Headers));
+                                       .AllowAnyHeader());
                     });
 
                     services.AddMvc(options =>
