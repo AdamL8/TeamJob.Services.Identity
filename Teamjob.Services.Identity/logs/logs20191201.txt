@@ -1,0 +1,72 @@
+2019-12-01 18:22:13.190 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-01 18:22:13.944 -05:00 [INF] Declaring a queue: 'teamjob.services.identity/profile.profile_deleted' with routing key: 'profile_deleted' for exchange: 'profile'.
+2019-12-01 18:22:14.398 -05:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2019-12-01 18:23:19.450 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-01 18:23:19.792 -05:00 [INF] Declaring a queue: 'teamjob.services.identity/profile.profile_deleted' with routing key: 'profile_deleted' for exchange: 'profile'.
+2019-12-01 18:23:19.889 -05:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2019-12-01 18:24:05.028 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-01 18:24:05.400 -05:00 [INF] Declaring a queue: 'teamjob.services.identity/profile.profile_deleted' with routing key: 'profile_deleted' for exchange: 'profile'.
+2019-12-01 18:24:05.488 -05:00 [INF] Now listening on: https://localhost:5001
+2019-12-01 18:24:05.490 -05:00 [INF] Now listening on: http://localhost:5000
+2019-12-01 18:24:05.491 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2019-12-01 18:24:05.492 -05:00 [INF] Hosting environment: Development
+2019-12-01 18:24:05.493 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\Teamjob.Services.Identity
+2019-12-01 18:24:06.422 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2019-12-01 18:24:06.454 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-12-01 18:24:06.489 -05:00 [INF] Route matched with {action = "Get", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Teamjob.Services.Identity.Controllers.HomeController (Teamjob.Services.Identity).
+2019-12-01 18:24:06.554 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-12-01 18:24:06.561 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.2992ms.
+2019-12-01 18:24:06.570 -05:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2019-12-01 18:24:06.581 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity) in 86.367ms
+2019-12-01 18:24:06.584 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.HomeController.Get (Teamjob.Services.Identity)'
+2019-12-01 18:24:06.588 -05:00 [INF] Request finished in 168.6953ms 200 application/json
+2019-12-01 18:24:21.496 -05:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/identity/register application/json 80
+2019-12-01 18:24:21.501 -05:00 [INF] Executing endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Register (Teamjob.Services.Identity)'
+2019-12-01 18:24:21.533 -05:00 [INF] Route matched with {action = "Register", controller = "Identity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Teamjob.Services.Identity.Commands.Register) on controller Teamjob.Services.Identity.Controllers.IdentityController (Teamjob.Services.Identity).
+2019-12-01 18:24:21.809 -05:00 [INF] Executing action method Teamjob.Services.Identity.Controllers.IdentityController.Register (Teamjob.Services.Identity) - Validation state: "Valid"
+2019-12-01 18:24:22.707 -05:00 [INF] New User registered. ID : [a80042e8-19ce-440d-855e-147d9376a095] | Email : [adam.letourneau199333@gmail.com]
+2019-12-01 18:24:22.747 -05:00 [INF] Publishing a message with routing key: 'registered' to exchange: 'identity' [id: 'af411365203c4d8e89aa8b7037b5205d', correlation id: '364c282cd82c428499570ca094acdf9e']
+2019-12-01 18:24:22.756 -05:00 [INF] Executed action method Teamjob.Services.Identity.Controllers.IdentityController.Register (Teamjob.Services.Identity), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 944.5063ms.
+2019-12-01 18:24:22.761 -05:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-12-01 18:24:22.819 -05:00 [INF] Executed action Teamjob.Services.Identity.Controllers.IdentityController.Register (Teamjob.Services.Identity) in 1282.1641ms
+2019-12-01 18:24:22.822 -05:00 [INF] Executed endpoint 'Teamjob.Services.Identity.Controllers.IdentityController.Register (Teamjob.Services.Identity)'
+2019-12-01 18:24:22.825 -05:00 [INF] Request finished in 1329.5230000000001ms 201 application/json
+2019-12-01 18:25:52.461 -05:00 [INF] Application is shutting down...

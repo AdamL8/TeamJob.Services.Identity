@@ -10,22 +10,18 @@ namespace Teamjob.Services.Identity.Domain
 {
     public class RefreshToken : IIdentifiable<Guid>
     {
-        public Guid      Id        { get; private set; }
-        public Guid      UserId    { get; private set; }
-        public string    Token     { get; private set; }
-        public DateTime  CreatedAt { get; private set; }
-        public DateTime? RevokedAt { get; private set; }
-        public bool      IsRevoked   => RevokedAt.HasValue;
-
-        protected RefreshToken()
-        {
-        }
+        public Guid Id         { get; private set; }
+        public Guid UserId     { get; private set; }
+        public string Token    { get; private set; }
+        public long  CreatedAt { get; private set; }
+        public long? RevokedAt { get; private set; }
+        public bool IsRevoked  => RevokedAt.HasValue;
 
         public RefreshToken(User InUser, IPasswordHasher<User> InPasswordHasher)
         {
             Id        = Guid.NewGuid();
             UserId    = InUser.Id;
-            CreatedAt = DateTime.UtcNow;
+            CreatedAt = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             Token     = CreateToken(InUser, InPasswordHasher);
         }
 
@@ -37,7 +33,7 @@ namespace Teamjob.Services.Identity.Domain
                     $"Refresh token: '{Id}' was already revoked at '{RevokedAt}'.");
             }
 
-            RevokedAt = DateTime.UtcNow;
+            RevokedAt = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
         }
 
         private static string CreateToken(User InUser, IPasswordHasher<User> InPasswordHasher)
