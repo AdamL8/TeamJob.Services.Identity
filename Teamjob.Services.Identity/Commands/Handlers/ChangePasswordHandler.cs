@@ -34,12 +34,14 @@ namespace Teamjob.Services.Identity.Commands.Handlers
             var user = await _userRepository.GetAsync(InCommand.Id);
             if (user is null)
             {
+                _logger.LogError($"Cannot change password of User with ID : [{InCommand.Id}] because it doesn't exist");
                 throw new TeamJobException("Codes.UserNotFound",
                     $"User with id: '{InCommand.Id}' was not found.");
             }
+
             if (user.ValidatePassword(InCommand.CurrentPassword, _passwordHasher) == false)
             {
-                _logger.LogInformation($"Changed password of User with ID [{InCommand.Id}].");
+                _logger.LogError($"Invalid password supplied for User with ID : [{InCommand.Id}].");
                 throw new TeamJobException("Codes.InvalidCurrentPassword",
                     "Invalid current password.");
             }

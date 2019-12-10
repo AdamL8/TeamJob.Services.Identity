@@ -32,15 +32,22 @@ namespace Teamjob.Services.Identity.Events.External.Handlers
 
         public async Task HandleAsync(PasswordReset InEvent)
         {
+            if (string.IsNullOrEmpty(InEvent.NewPassword))
+            {
+                _logger.LogError($"Cannot reset the password of User with ID : [{InEvent.Id}] because it is null");
+                return;
+            }
+
             var user = await _userRepository.GetAsync(InEvent.Id);
             if (user is null)
             {
-                _logger.LogInformation($"Cannot delete User with ID : [{InEvent.Id}] because it doesn't exist");
+                _logger.LogError($"Cannot delete User with ID : [{InEvent.Id}] because it doesn't exist");
                 return;
             }
 
             // TODO: Possibly check against the expiry date if this service is the one storing the temporary passwords
 
+            user = new User(user.Id, user.Email, user.Role, user.CreatedAt);
             user.SetPassword(InEvent.NewPassword, _passwordHasher);
 
             _logger.LogInformation($"Successfully reset the password of User with ID : [{user.Id}]");

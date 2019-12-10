@@ -44,7 +44,7 @@ namespace Teamjob.Services.Identity.Requests
             if (user is null || user.ValidatePassword(InRequest.Password, _passwordHasher) == false)
             {
                 await _busPublisher.PublishAsync(new LoginRejected(InRequest.Email, "Invalid credentials"));
-                _logger.LogInformation($"Login for email : [{InRequest.Email}] rejected with reason : Invalid credentials");
+                _logger.LogError($"Login for email : [{InRequest.Email}] rejected with reason : Invalid credentials");
 
                 throw new TeamJobException("Codes.InvalidCredentials",
                                            "Invalid credentials.");
