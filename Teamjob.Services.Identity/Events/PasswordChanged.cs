@@ -6,13 +6,12 @@ namespace Teamjob.Services.Identity.Events
 {
     public class PasswordChanged : IEvent 
     {
-        public Guid Id       { get; }
-
+        public Guid Id { get; }
 
         [JsonConstructor]
         public PasswordChanged(Guid id)
         {
-            Id     = id;
+            Id = id;
         }
     }
 }

@@ -45,9 +45,20 @@ namespace Teamjob.Services.Identity.Controllers
             return Ok(await _requestDispatcher.DispatchAsync<Register, LoginInfo>(InRequest));
         }
 
-        // PUT api/identity/password
+        // POST api/identity/forgot-password
+        [HttpPost("forgot-password")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public async Task<IActionResult> ResetPassword([FromBody]ResetPassword InCommand)
+        {
+            await _commandDispatcher.SendAsync(InCommand);
+
+            return CreatedAtAction(nameof(ResetPassword), InCommand.Email, new { email = InCommand.Email });
+        }
+
+        // PUT api/identity/me/password
         [HttpPut("me/password")]
         [JwtAuth]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult> ChangePassword([FromBody]ChangePassword InCommand)
         {
             await _commandDispatcher.SendAsync(InCommand);

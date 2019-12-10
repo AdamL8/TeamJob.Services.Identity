@@ -7,7 +7,7 @@ namespace Teamjob.Services.Identity.Commands.Validations
     {
         public ChangePasswordValidator()
         {
-            RuleFor(x => x.CurrentPassword)
+            RuleFor(x => x.Id)
                 .NotNull().WithMessage("User ID cannot be empty");
 
             RuleFor(x => x.CurrentPassword)
@@ -21,6 +21,13 @@ namespace Teamjob.Services.Identity.Commands.Validations
                 .NotNull().WithMessage("New Password cannot be empty")
                 .NotEmpty().WithMessage("New Password cannot be empty")
                 .Must(IsValidPassword).WithMessage("New Password must be between 8 and 20 alphanumeric characters");
+
+            RuleFor(x => x.NewPasswordConfirmation)
+                .Cascade(CascadeMode.StopOnFirstFailure)
+                .NotNull().WithMessage("New Password cannot be empty")
+                .NotEmpty().WithMessage("New Password cannot be empty")
+                .Must(IsValidPassword).WithMessage("New Password must be between 8 and 20 alphanumeric characters")
+                .Equal(x => x.NewPassword).WithMessage("New Password and New Password Confirmation do not match");
         }
 
         private bool IsValidPassword(string password)
@@ -29,6 +36,5 @@ namespace Teamjob.Services.Identity.Commands.Validations
 
             return Regex.Match(password, regex).Success;
         }
-
     }
 }

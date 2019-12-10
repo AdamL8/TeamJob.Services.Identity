@@ -22,7 +22,7 @@ namespace Teamjob.Services.Identity.Domain
 
         public User(Guid InId, string InEmail, Role InRole)
             : this(InId, InEmail, InRole, DateTimeOffset.UtcNow.ToUnixTimeSeconds())
-        {            
+        {
         }
 
         public User(Guid InId, string InEmail, Role InRole, long InCreatedAt)
