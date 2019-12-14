@@ -6,16 +6,15 @@ using Convey.WebApi.Requests;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Teamjob.Services.Identity.Domain;
+using Teamjob.Services.Identity.DTO;
 using Teamjob.Services.Identity.Events;
 using Teamjob.Services.Identity.Exceptions;
 
 namespace Teamjob.Services.Identity.Requests
 {
-    public class LoginHandler : IRequestHandler<Login, string>
+    public class LoginHandler : IRequestHandler<Login, LoginInfo>
     {
         private readonly IMongoRepository<User, Guid>         _userRepository;
         private readonly IMongoRepository<RefreshToken, Guid> _refreshTokenRepository;
@@ -39,13 +38,13 @@ namespace Teamjob.Services.Identity.Requests
             _logger                 = InLogger;
         }
 
-        public async Task<string> HandleAsync(Login InRequest)
+        public async Task<LoginInfo> HandleAsync(Login InRequest)
         {
             var user = await _userRepository.GetAsync(x => x.Email == InRequest.Email);
             if (user is null || user.ValidatePassword(InRequest.Password, _passwordHasher) == false)
             {
                 await _busPublisher.PublishAsync(new LoginRejected(InRequest.Email, "Invalid credentials"));
-                _logger.LogInformation($"Login for email : [{InRequest.Email}] rejected with reason : Invalid credentials");
+                _logger.LogError($"Login for email : [{InRequest.Email}] rejected with reason : Invalid credentials");
 
                 throw new TeamJobException("Codes.InvalidCredentials",
                                            "Invalid credentials.");
@@ -60,7 +59,7 @@ namespace Teamjob.Services.Identity.Requests
             _logger.LogInformation($"Logged in User with ID : {user.Id} and Email : {InRequest.Email}. JWT : {jwt.AccessToken}");
             await _busPublisher.PublishAsync(new LogedIn(user.Id));
 
-            return jwt.AccessToken;
+            return new LoginInfo { Id = user.Id, AccessToken = jwt.AccessToken, Role = user.Role.ToString() };
         }
     }
 }

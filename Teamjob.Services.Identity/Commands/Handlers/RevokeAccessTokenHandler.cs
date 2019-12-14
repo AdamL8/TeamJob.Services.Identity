@@ -15,7 +15,7 @@ namespace Teamjob.Services.Identity.Commands.Handlers
 
         public async Task HandleAsync(RevokeAccessToken InCommand)
         {
-            await _accessTokenService.DeactivateAsync(InCommand.UserId.ToString("N"), InCommand.Token);
+            await _accessTokenService.DeactivateAsync(InCommand.Id.ToString("N"), InCommand.Token);
         }
     }
 }

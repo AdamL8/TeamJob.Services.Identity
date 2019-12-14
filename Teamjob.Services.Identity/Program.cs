@@ -17,16 +17,16 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading.Tasks;
-using Teamjob.Services.Identity.Commands.Validations;
 using Teamjob.Services.Identity.Domain;
 using Teamjob.Services.Identity.Events.External;
 using Teamjob.Services.Identity.Filters;
+using Teamjob.Services.Identity.Requests.Validations;
 
 namespace Teamjob.Services.Identity
 {
     public class Program
     {
-        private static readonly string[] Headers = new[] { "X-Operation", "X-Resource", "X-Total-Count" };
+        private static readonly string[] Headers = new[] { "X-Operation", "X-Resource", "X-Total-Count", "Content-Type" };
         public static Task Main(string[] args)
                     => CreateHostBuilder(args).Build().RunAsync();
 
@@ -41,8 +41,9 @@ namespace Teamjob.Services.Identity
                     services.AddCors(options =>
                     {
                         options.AddPolicy("CorsPolicy", builder =>
-                                builder.AllowCredentials()
-                                       .WithExposedHeaders(Headers));
+                                builder.AllowAnyOrigin()
+                                       .AllowAnyMethod()
+                                       .AllowAnyHeader());
                     });
 
                     services.AddMvc(options =>

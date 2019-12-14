@@ -62,7 +62,7 @@ namespace Teamjob.Services.Identity.Requests.Handlers
             {
                 await _busPublisher.PublishAsync(new RefreshAccessTokenRejected(user.Id,
                     $"User: '{refreshToken.UserId}' referenced by the refresh token was not found."));
-                _logger.LogInformation($"User: '{refreshToken.UserId}' referenced by the refresh token was not found.");
+                _logger.LogError($"User: '{refreshToken.UserId}' referenced by the refresh token was not found.");
 
                 throw new TeamJobException("Codes.UserNotFound",
                     $"User: '{refreshToken.UserId}' was not found.");

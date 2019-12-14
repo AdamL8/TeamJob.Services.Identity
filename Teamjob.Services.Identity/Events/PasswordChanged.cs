@@ -4,12 +4,12 @@ using System;
 
 namespace Teamjob.Services.Identity.Events
 {
-    public class LogedIn : IEvent 
+    public class PasswordChanged : IEvent 
     {
         public Guid Id { get; }
 
         [JsonConstructor]
-        public LogedIn(Guid id)
+        public PasswordChanged(Guid id)
         {
             Id = id;
         }

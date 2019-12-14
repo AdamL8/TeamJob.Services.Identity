@@ -7,12 +7,12 @@ namespace Teamjob.Services.Identity.Events
 {
     public class RevokeRefreshTokenRejected
     {
-        public Guid UserId   { get; }
+        public Guid Id       { get; }
         public string Reason { get; }
 
-        public RevokeRefreshTokenRejected(Guid userId, string reason)
+        public RevokeRefreshTokenRejected(Guid id, string reason)
         {
-            UserId = userId;
+            Id     = id;
             Reason = reason;
         }
     }
