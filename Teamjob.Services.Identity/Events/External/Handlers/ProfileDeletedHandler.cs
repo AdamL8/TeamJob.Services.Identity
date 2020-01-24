@@ -34,7 +34,7 @@ namespace Teamjob.Services.Identity.Events.External.Handlers
             var user = await _userRepository.GetAsync(InEvent.Id);
             if (user is null)
             {
-                _logger.LogInformation($"Cannot delete User with ID : [{InEvent.Id}] because it doesn't exist");
+                _logger.LogError($"Cannot delete User with ID : [{InEvent.Id}] because it doesn't exist");
                 return;
             }
 

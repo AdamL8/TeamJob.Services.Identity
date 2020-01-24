@@ -40,7 +40,7 @@ namespace Teamjob.Services.Identity.Requests.Handlers
             if (user != null)
             {
                 await _busPublisher.PublishAsync(new RegisterRejected(user.Id, InCommand.Email, "Email already in use"));
-                _logger.LogInformation($"Registration rejected. User with ID : [{user.Id}] already uses this email address");
+                _logger.LogError($"Registration rejected. User with ID : [{user.Id}] already uses this email address");
 
                 throw new TeamJobException("Codes.EmailInUse",
                     $"Email: '{InCommand.Email}' is already in use.");

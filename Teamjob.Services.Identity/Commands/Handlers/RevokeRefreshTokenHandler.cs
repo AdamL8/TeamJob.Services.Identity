@@ -33,7 +33,7 @@ namespace Teamjob.Services.Identity.Commands.Handlers
             {
                 await _busPublisher.PublishAsync(new RevokeRefreshTokenRejected(refreshToken.UserId,
                     $"Refresh token [{InCommand.Token}] to revoke with User ID [{InCommand.Id}] was not found."));
-                _logger.LogInformation($"Refresh token [{InCommand.Token}] to revoke with User ID [{InCommand.Id}] was not found.");
+                _logger.LogError($"Refresh token [{InCommand.Token}] to revoke with User ID [{InCommand.Id}] was not found.");
 
                 throw new TeamJobException("Codes.RefreshTokenNotFound",
                     $"Refresh token [{InCommand.Token}] to revoke with User ID [{InCommand.Id}] was not found.");

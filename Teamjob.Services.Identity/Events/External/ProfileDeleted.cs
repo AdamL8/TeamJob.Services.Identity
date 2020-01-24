@@ -7,16 +7,19 @@ using System.Collections.Generic;
 namespace Teamjob.Services.Identity.Events.External
 {
     [Message(exchange: "profile", external: true)]
-    public class ProfileDeleted : IEvent
+    public class ProfileDeleted :IEvent
     {
-        public Guid Id { get; }
-        public List<Guid> Teams { get; }
+        public Guid Id            { get; }
+        public List<Guid> TeamIds { get; }
+        public string Role        { get; }
+
 
         [JsonConstructor]
-        public ProfileDeleted(Guid id, List<Guid> teams)
+        public ProfileDeleted(Guid id, List<Guid> teamIds, string role)
         {
-            Id    = id;
-            Teams = teams;
+            Id      = id;
+            TeamIds = teamIds;
+            Role    = role;
         }
     }
 }
