@@ -22,7 +22,7 @@ namespace Teamjob.Services.Identity.Requests.Validations
 
         private bool IsValidPassword(string password)
         {
-            const string regex = @"(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,20})$";
+            const string regex = @"^(?=.*?[a-z])(?=.*?[0-9]).{8,20}$";
 
             return Regex.Match(password, regex).Success;
         }
