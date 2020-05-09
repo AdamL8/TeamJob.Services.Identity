@@ -31,23 +31,25 @@ namespace Teamjob.Services.Identity.Events.External.Handlers
 
         public async Task HandleAsync(ProfileDeleted InEvent)
         {
-            var user = await _userRepository.GetAsync(InEvent.Id);
+            var userId = InEvent.Id;
+
+            var user = await _userRepository.GetAsync(userId);
             if (user is null)
             {
-                _logger.LogError($"Cannot delete User with ID : [{InEvent.Id}] because it doesn't exist");
+                _logger.LogError($"Cannot delete User with ID : [{userId}] because it doesn't exist");
                 return;
             }
 
-            var token = await _tokenRepository.GetAsync(x => x.UserId == user.Id);
+            var token = await _tokenRepository.GetAsync(x => x.UserId == userId);
 
             if (token != null)
             {
                 await _tokenRepository.DeleteAsync(token.Id);
-                _logger.LogInformation($"Refresh Token with ID [{token.Id}] associated with User with ID [{user.Id}] DELETED");
+                _logger.LogInformation($"Refresh Token with ID [{token.Id}] associated with User with ID [{userId}] was DELETED");
             }
 
-            await _userRepository.DeleteAsync(InEvent.Id);
-            _logger.LogInformation($"User with ID [{user.Id}] DELETED");
+            await _userRepository.DeleteAsync(userId);
+            _logger.LogInformation($"User with ID [{user.Id}] was DELETED");
 
             await _busPublisher.PublishAsync(new UserDeleted(user.Id, user.Email, user.Role.ToString()));
         }

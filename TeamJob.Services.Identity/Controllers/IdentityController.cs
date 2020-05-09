@@ -1,12 +1,15 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Convey.Auth;
 using Convey.CQRS.Commands;
+using Convey.WebApi;
 using Convey.WebApi.Requests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Teamjob.Services.Identity.Commands;
 using Teamjob.Services.Identity.DTO;
 using Teamjob.Services.Identity.Requests;
+using TeamJob.Services.Identity.Commands;
 
 namespace Teamjob.Services.Identity.Controllers
 {
@@ -64,6 +67,16 @@ namespace Teamjob.Services.Identity.Controllers
             await _commandDispatcher.SendAsync(InCommand);
 
             return CreatedAtAction(nameof(ChangePassword), InCommand.Id, new { id = InCommand.Id });
+        }
+
+        // DELET api/identity/delete
+        [HttpDelete("delete/{id}")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        public async Task<ActionResult> Delete([FromRoute]Guid id, DeleteUser InCommand)
+        {
+            await _commandDispatcher.SendAsync(InCommand.Bind(x => x.Id, id));
+
+            return CreatedAtAction(nameof(Delete), InCommand.Id, new { id = InCommand.Id });
         }
     }
 }

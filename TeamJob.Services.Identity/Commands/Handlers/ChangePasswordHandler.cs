@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Teamjob.Services.Identity.Domain;
 using Teamjob.Services.Identity.Events;
 using Teamjob.Services.Identity.Exceptions;
+using TeamJob.Services.Identity.Exceptions;
 
 namespace Teamjob.Services.Identity.Commands.Handlers
 {
@@ -31,19 +32,19 @@ namespace Teamjob.Services.Identity.Commands.Handlers
 
         public async Task HandleAsync(ChangePassword InCommand)
         {
-            var user = await _userRepository.GetAsync(InCommand.Id);
+            var userId = InCommand.Id;
+
+            var user = await _userRepository.GetAsync(userId);
             if (user is null)
             {
-                _logger.LogError($"Cannot change password of User with ID : [{InCommand.Id}] because it doesn't exist");
-                throw new TeamJobException("Codes.UserNotFound",
-                    $"User with id: '{InCommand.Id}' was not found.");
+                _logger.LogError($"Cannot change password of User with ID : [{userId}] because it doesn't exist");
+                throw new UserNotFoundException(userId);
             }
 
             if (user.ValidatePassword(InCommand.CurrentPassword, _passwordHasher) == false)
             {
-                _logger.LogError($"Invalid password supplied for User with ID : [{InCommand.Id}].");
-                throw new TeamJobException("Codes.InvalidCurrentPassword",
-                    "Invalid current password.");
+                _logger.LogError($"Invalid password supplied for User with ID : [{userId}].");
+                throw new InvalidCurrentPasswordException();
             }
 
             user = new User(user.Id, user.Email, user.Role, user.CreatedAt);
@@ -51,8 +52,8 @@ namespace Teamjob.Services.Identity.Commands.Handlers
 
             await _userRepository.UpdateAsync(user);
 
-            _logger.LogInformation($"Changed password of User with ID [{InCommand.Id}].");
-            await _busPublisher.PublishAsync(new PasswordChanged(InCommand.Id));
+            _logger.LogInformation($"Changed password of User with ID [{userId}].");
+            await _busPublisher.PublishAsync(new PasswordChanged(userId));
         }
     }
 }
