@@ -8,7 +8,7 @@ namespace TeamJob.Services.Identity.Exceptions
 {
     public class RefreshTokenNotFoundException : TeamJobException
     {
-        public override string Code { get; } = "refresh_token_not_found";
+        public override string Code { get; } = "jwt_refresh_token_not_found";
 
         public RefreshTokenNotFoundException(string InToken, Guid InUserId)
             : base($"Refresh token [{InToken}] to revoke with User ID [{InUserId}] was not found.")

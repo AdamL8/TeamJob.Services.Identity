@@ -69,7 +69,7 @@ namespace Teamjob.Services.Identity.Controllers
             return CreatedAtAction(nameof(ChangePassword), InCommand.Id, new { id = InCommand.Id });
         }
 
-        // DELET api/identity/delete
+        // DELETE api/identity/delete
         [HttpDelete("delete/{id}")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult> Delete([FromRoute]Guid id, DeleteUser InCommand)
