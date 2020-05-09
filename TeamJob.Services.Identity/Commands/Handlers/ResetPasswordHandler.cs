@@ -27,17 +27,21 @@ namespace Teamjob.Services.Identity.Commands.Handlers
 
         public async Task HandleAsync(ResetPassword InCommand)
         {
+            var userEmail = InCommand.Email;
+
             var user = await _userRepository.GetAsync(x => x.Email.Equals(InCommand.Email));
             if (user is null)
             {
-                throw new TeamJobException("Codes.UserNotFound",
-                    $"No User with email: [{InCommand.Email}] was found.");
+                _logger.LogError($"Cannot reset password of User with Email : [{userEmail}] because it doesn't exist");
+                throw new UserNotFoundException(userEmail);
             }
 
+            var userId     = user.Id;
             var expiryDate = DateTimeOffset.UtcNow.AddDays(1);
+
             _logger.LogInformation($"Request to create new temporary password for User with ID : [{user.Id}] made. Expires at [{expiryDate.DateTime}]");
 
-            await _busPublisher.PublishAsync(new ForgotPassword(user.Id, InCommand.Email, InCommand.Lang, expiryDate.ToUnixTimeSeconds()));
+            await _busPublisher.PublishAsync(new ForgotPassword(userId, userEmail, InCommand.Lang, expiryDate.ToUnixTimeSeconds()));
         }
     }
 }

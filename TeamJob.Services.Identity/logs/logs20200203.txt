@@ -1,0 +1,11 @@
+2020-02-03 00:33:54.990 -05:00 [INF] User profile is available. Using 'C:\Users\Adam\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-02-03 00:33:55.527 -05:00 [INF] Declaring a queue: 'team_job.services.identity/profile.profile_deleted' with routing key: 'profile_deleted' for exchange: 'profile'.
+2020-02-03 00:33:55.703 -05:00 [INF] Now listening on: https://localhost:5001
+2020-02-03 00:33:55.716 -05:00 [INF] Now listening on: http://localhost:5000
+2020-02-03 00:33:55.718 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-02-03 00:33:55.721 -05:00 [INF] Hosting environment: Development
+2020-02-03 00:33:55.722 -05:00 [INF] Content root path: C:\Users\Adam\Repositories\Teamjob.Services.Identity\TeamJob.Services.Identity
+2020-02-03 00:34:09.721 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/health  
+2020-02-03 00:34:09.740 -05:00 [INF] Request finished in 21.819000000000003ms 200 text/plain
+2020-02-03 00:34:10.038 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2020-02-03 00:34:10.067 -05:00 [INF] Request finished in 28.6991ms 404 

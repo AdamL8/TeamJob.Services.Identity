@@ -1,16 +1,14 @@
 ﻿using Convey.Auth;
-using Convey.CQRS.Commands;
 using Convey.MessageBrokers;
 using Convey.Persistence.MongoDB;
 using Convey.WebApi.Requests;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Teamjob.Services.Identity.Domain;
 using Teamjob.Services.Identity.Events;
 using Teamjob.Services.Identity.Exceptions;
+using TeamJob.Services.Identity.Exceptions;
 
 namespace Teamjob.Services.Identity.Requests.Handlers
 {
@@ -48,30 +46,31 @@ namespace Teamjob.Services.Identity.Requests.Handlers
                     "Refresh token was not found.");
             }
 
+            var userId         = refreshToken.UserId;
+            var refreshTokenId = refreshToken.Id;
+
             if (refreshToken.IsRevoked)
             {
                 //await _busPublisher.PublishAsync(new RefreshAccessTokenRejected(user.Id, $"Refresh token: '{refreshToken.Id}' was revoked."));
 
-                throw new TeamJobException("Codes.RefreshTokenAlreadyRevoked",
-                    $"Refresh token: '{refreshToken.Id}' was revoked.");
+                throw new RefreshTokenAlreadyRevokedException(refreshTokenId);
             }
 
-            var user = await _userRepository.GetAsync(refreshToken.UserId);
+            var user = await _userRepository.GetAsync(userId);
 
             if (user is null)
             {
-                await _busPublisher.PublishAsync(new RefreshAccessTokenRejected(user.Id,
-                    $"User: '{refreshToken.UserId}' referenced by the refresh token was not found."));
-                _logger.LogError($"User: '{refreshToken.UserId}' referenced by the refresh token was not found.");
+                await _busPublisher.PublishAsync(new RefreshAccessTokenRejected(userId,
+                    $"User: '{userId}' referenced by the refresh token was not found."));
+                _logger.LogError($"User: '{userId}' referenced by the refresh token was not found.");
 
-                throw new TeamJobException("Codes.UserNotFound",
-                    $"User: '{refreshToken.UserId}' was not found.");
+                throw new UserNotFoundException(userId);
             }
 
-            var jwt          = _jwtHandler.CreateToken(user.Id.ToString("N"), user.Role.ToString());
+            var jwt          = _jwtHandler.CreateToken(userId.ToString("N"), user.Role.ToString());
             jwt.RefreshToken = refreshToken.Token;
 
-            await _busPublisher.PublishAsync(new AccessTokenRefreshed(user.Id));
+            await _busPublisher.PublishAsync(new AccessTokenRefreshed(userId));
 
             return jwt.AccessToken;
         }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Teamjob.Services.Identity.Domain;
 using Teamjob.Services.Identity.DTO;
 using Teamjob.Services.Identity.Events;
-using Teamjob.Services.Identity.Exceptions;
+using TeamJob.Services.Identity.Exceptions;
 
 namespace Teamjob.Services.Identity.Requests
 {
@@ -46,8 +46,7 @@ namespace Teamjob.Services.Identity.Requests
                 await _busPublisher.PublishAsync(new LoginRejected(InRequest.Email, "Invalid credentials"));
                 _logger.LogError($"Login for email : [{InRequest.Email}] rejected with reason : Invalid credentials");
 
-                throw new TeamJobException("Codes.InvalidCredentials",
-                                           "Invalid credentials.");
+                throw new InvalidCredentialsException(InRequest.Email);
             }
 
             var refreshToken = new RefreshToken(user, _passwordHasher);

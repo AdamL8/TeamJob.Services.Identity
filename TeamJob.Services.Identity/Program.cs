@@ -10,6 +10,7 @@ using Convey.Persistence.MongoDB;
 using Convey.WebApi;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -37,6 +38,8 @@ namespace Teamjob.Services.Identity
                 {
                     services.AddTransient(typeof(IPasswordHasher<User>), typeof(PasswordHasher<User>));
                     services.AddDistributedMemoryCache();
+                    services.AddHealthChecks();
+                    services.AddHealthChecksUI();
 
                     services.AddCors(options =>
                     {
@@ -75,12 +78,21 @@ namespace Teamjob.Services.Identity
                 }) 
                     .Configure(app => app
                         .UseAuthentication()
+                        .UseHealthChecks("/health", new HealthCheckOptions
+                        {
+                            Predicate = _ => true
+                        })
+                        .UseHealthChecksUI()
                         .UseConvey()
                         .UseErrorHandler()
                         .UseCors("CorsPolicy")
                         .UseAllForwardedHeaders()
                         .UseRouting()
-                        .UseEndpoints(r => r.MapControllers())
+                        .UseEndpoints(config =>
+                        {
+                            config.MapControllers();
+                            config.MapHealthChecksUI();
+                        })
                         .UseRabbitMq()
                         .SubscribeEvent<ProfileDeleted>())
                     .UseLogging();

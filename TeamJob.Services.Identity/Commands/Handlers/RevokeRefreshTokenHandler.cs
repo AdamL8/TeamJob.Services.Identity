@@ -6,7 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Teamjob.Services.Identity.Domain;
 using Teamjob.Services.Identity.Events;
-using Teamjob.Services.Identity.Exceptions;
+using TeamJob.Services.Identity.Exceptions;
 
 namespace Teamjob.Services.Identity.Commands.Handlers
 {
@@ -27,23 +27,25 @@ namespace Teamjob.Services.Identity.Commands.Handlers
 
         public async Task HandleAsync(RevokeRefreshToken InCommand)
         {
-            var refreshToken = await _tokenRepository.GetAsync(x => x.Token == InCommand.Token);
+            var token  = InCommand.Token;
+            var userId = InCommand.Id;
 
-            if (refreshToken is null || refreshToken.UserId != InCommand.Id)
+            var refreshToken = await _tokenRepository.GetAsync(x => x.Token == token);
+
+            if (refreshToken is null || refreshToken.UserId != userId)
             {
-                await _busPublisher.PublishAsync(new RevokeRefreshTokenRejected(refreshToken.UserId,
-                    $"Refresh token [{InCommand.Token}] to revoke with User ID [{InCommand.Id}] was not found."));
-                _logger.LogError($"Refresh token [{InCommand.Token}] to revoke with User ID [{InCommand.Id}] was not found.");
+                await _busPublisher.PublishAsync(new RevokeRefreshTokenRejected(userId,
+                    $"Refresh token [{token}] to revoke with User ID [{userId}] was not found."));
+                _logger.LogError($"Refresh token [{token}] to revoke with User ID [{userId}] was not found.");
 
-                throw new TeamJobException("Codes.RefreshTokenNotFound",
-                    $"Refresh token [{InCommand.Token}] to revoke with User ID [{InCommand.Id}] was not found.");
+                throw new RefreshTokenNotFoundException(token, userId);
             }
 
             refreshToken.Revoke();
             await _tokenRepository.UpdateAsync(refreshToken);
 
-            _logger.LogInformation($"Refresh token fo User with ID [{InCommand.Id}] has been revoked.");
-            await _busPublisher.PublishAsync(new RefreshTokenRevoked(refreshToken.UserId));
+            _logger.LogInformation($"Refresh token [{token}] for User with ID [{userId}] has been revoked.");
+            await _busPublisher.PublishAsync(new RefreshTokenRevoked(userId));
         }
     }
 }
