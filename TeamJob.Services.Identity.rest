@@ -1,0 +1,51 @@
+@url = http://localhost:5000/api/identity
+@accessToken = secret
+@refreshToken = secret
+
+@password = secret
+
+###
+POST {{url}}/register
+Content-Type: application/json
+
+{
+  "email": "teamjob-user1@mailinator.com",
+  "password": "{{password}}"
+}
+
+###
+POST {{url}}/login
+Content-Type: application/json
+
+{
+  "email": "teamjob-user1@mailinator.com",
+  "password": "secret"
+}
+
+###
+GET {{url}}/me
+Authorization: Bearer {{accessToken}}
+
+###
+POST {{url}}/refresh-tokens/use
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}",
+}
+
+###
+POST {{url}}/refresh-tokens/revoke
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}",
+}
+
+###
+POST {{url}}/access-tokens/revoke
+Content-Type: application/json
+
+{
+  "accessToken": "{{accessToken}}",
+}

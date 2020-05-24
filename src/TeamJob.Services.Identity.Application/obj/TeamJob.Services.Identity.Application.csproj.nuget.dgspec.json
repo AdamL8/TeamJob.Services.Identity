@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Application\\TeamJob.Services.Identity.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Application\\TeamJob.Services.Identity.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Application\\TeamJob.Services.Identity.Application.csproj",
+        "projectName": "TeamJob.Services.Identity.Application",
+        "projectPath": "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Application\\TeamJob.Services.Identity.Application.csproj",
+        "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/efcore-mongodb/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Core\\TeamJob.Services.Identity.Core.csproj": {
+                "projectPath": "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Core\\TeamJob.Services.Identity.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Convey": {
+              "target": "Package",
+              "version": "[0.4.*, )"
+            },
+            "Convey.CQRS.Commands": {
+              "target": "Package",
+              "version": "[0.4.*, )"
+            },
+            "Convey.CQRS.Events": {
+              "target": "Package",
+              "version": "[0.4.*, )"
+            },
+            "Convey.CQRS.Queries": {
+              "target": "Package",
+              "version": "[0.4.*, )"
+            },
+            "Convey.MessageBrokers": {
+              "target": "Package",
+              "version": "[0.4.*, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Core\\TeamJob.Services.Identity.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Core\\TeamJob.Services.Identity.Core.csproj",
+        "projectName": "TeamJob.Services.Identity.Core",
+        "projectPath": "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Core\\TeamJob.Services.Identity.Core.csproj",
+        "packagesPath": "C:\\Users\\Adam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Adam\\Repositories\\TeamJob\\v2\\TeamJob.Services.Identity\\src\\TeamJob.Services.Identity.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Adam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/efcore-mongodb/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

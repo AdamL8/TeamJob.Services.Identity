@@ -1,11 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29418.71
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeamJob.Services.Identity", "TeamJob.Services.Identity\TeamJob.Services.Identity.csproj", "{B126ABD5-D085-4BFD-A473-E392923B9034}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EEF572C0-7F49-4027-BB3C-12E090E8125A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C9606A5-2F01-44A2-8D88-34A861C20EAC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{38DF8001-CCE7-4792-B67B-CBD60F236A39}"
+	ProjectSection(SolutionItems) = preProject
+		build.sh = build.sh
+		start.sh = start.sh
+		test.sh = test.sh
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeamJob.Services.Identity.API", "src\TeamJob.Services.Identity.API\TeamJob.Services.Identity.API.csproj", "{18FD8C5B-9062-4B5D-B657-CD64D76B8180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamJob.Services.Identity.Core", "src\TeamJob.Services.Identity.Core\TeamJob.Services.Identity.Core.csproj", "{83769E35-E6F4-485B-BB07-BA41F683085E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamJob.Services.Identity.Infrastructure", "src\TeamJob.Services.Identity.Infrastructure\TeamJob.Services.Identity.Infrastructure.csproj", "{8D9C4BFF-7E55-442B-B443-F425467CE069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamJob.Services.Identity.Application", "src\TeamJob.Services.Identity.Application\TeamJob.Services.Identity.Application.csproj", "{2821244F-ED25-41AD-8DE7-E811C7CF368D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +26,33 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B126ABD5-D085-4BFD-A473-E392923B9034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B126ABD5-D085-4BFD-A473-E392923B9034}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B126ABD5-D085-4BFD-A473-E392923B9034}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B126ABD5-D085-4BFD-A473-E392923B9034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FD8C5B-9062-4B5D-B657-CD64D76B8180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FD8C5B-9062-4B5D-B657-CD64D76B8180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FD8C5B-9062-4B5D-B657-CD64D76B8180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FD8C5B-9062-4B5D-B657-CD64D76B8180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83769E35-E6F4-485B-BB07-BA41F683085E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83769E35-E6F4-485B-BB07-BA41F683085E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83769E35-E6F4-485B-BB07-BA41F683085E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83769E35-E6F4-485B-BB07-BA41F683085E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9C4BFF-7E55-442B-B443-F425467CE069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9C4BFF-7E55-442B-B443-F425467CE069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9C4BFF-7E55-442B-B443-F425467CE069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9C4BFF-7E55-442B-B443-F425467CE069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2821244F-ED25-41AD-8DE7-E811C7CF368D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2821244F-ED25-41AD-8DE7-E811C7CF368D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2821244F-ED25-41AD-8DE7-E811C7CF368D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2821244F-ED25-41AD-8DE7-E811C7CF368D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B126ABD5-D085-4BFD-A473-E392923B9034} = {8C9606A5-2F01-44A2-8D88-34A861C20EAC}
+		{18FD8C5B-9062-4B5D-B657-CD64D76B8180} = {EEF572C0-7F49-4027-BB3C-12E090E8125A}
+		{83769E35-E6F4-485B-BB07-BA41F683085E} = {EEF572C0-7F49-4027-BB3C-12E090E8125A}
+		{8D9C4BFF-7E55-442B-B443-F425467CE069} = {EEF572C0-7F49-4027-BB3C-12E090E8125A}
+		{2821244F-ED25-41AD-8DE7-E811C7CF368D} = {EEF572C0-7F49-4027-BB3C-12E090E8125A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C3FDAFCD-83DE-4DCE-94E1-6CD39F9DA568}
+		SolutionGuid = {6307C01C-41C7-4BA4-A115-790E13697C2E}
 	EndGlobalSection
 EndGlobal
