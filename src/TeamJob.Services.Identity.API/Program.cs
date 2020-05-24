@@ -8,6 +8,7 @@ using Convey.Logging;
 using Convey.Types;
 using Convey.WebApi;
 using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -44,6 +45,7 @@ namespace TeamJob.Services.Identity.API
                         .Build();
                     })
                     .Configure(app => app
+                    .UseCors("CorsPolicy")
                     .UseInfrastructure()
                     .UseEndpoints(endpoints => endpoints
                         .Get("", ctx => ctx.Response.WriteAsync(ctx.RequestServices.GetService<AppOptions>().Name))
