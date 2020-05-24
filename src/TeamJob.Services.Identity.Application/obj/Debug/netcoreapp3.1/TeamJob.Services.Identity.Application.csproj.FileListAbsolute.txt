@@ -1,0 +1,12 @@
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\bin\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.deps.json
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\bin\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.dll
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\bin\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.pdb
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\bin\Debug\netcoreapp3.1\TeamJob.Services.Identity.Core.dll
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\bin\Debug\netcoreapp3.1\TeamJob.Services.Identity.Core.pdb
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\obj\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.csprojAssemblyReference.cache
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\obj\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.csproj.CoreCompileInputs.cache
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\obj\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.AssemblyInfoInputs.cache
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\obj\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.AssemblyInfo.cs
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\obj\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.csproj.CopyComplete
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\obj\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.dll
+C:\Users\Adam\Repositories\TeamJob\v2\TeamJob.Services.Identity\src\TeamJob.Services.Identity.Application\obj\Debug\netcoreapp3.1\TeamJob.Services.Identity.Application.pdb
