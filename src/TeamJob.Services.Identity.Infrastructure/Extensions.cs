@@ -63,7 +63,36 @@ namespace TeamJob.Services.Identity.Infrastructure
             builder.Services.TryDecorate(typeof(ICommandHandler<>), typeof(OutboxCommandHandlerDecorator<>));
             builder.Services.TryDecorate(typeof(IEventHandler<>), typeof(OutboxEventHandlerDecorator<>));
 
-            return builder
+            // First check if env vars exist
+            string mongoConnectionString = Environment.GetEnvironmentVariable("IDENTITY_DATABASE_CONNECTION_STRING");
+
+            if (mongoConnectionString != null)
+            {
+                // Set the mongo parameters
+                MongoDbOptions mongoOptions = new MongoDbOptions
+                {
+                    ConnectionString = mongoConnectionString,
+                    Database = "schedule-service",
+                    Seed = false
+                };
+
+                return builder
+                    .AddErrorHandler<ExceptionToResponseMapper>()
+                    .AddQueryHandlers()
+                    .AddInMemoryQueryDispatcher()
+                    .AddJwt()
+                    .AddHttpClient()
+                    .AddExceptionToMessageMapper<ExceptionToMessageMapper>()
+                    .AddRabbitMq()
+                    .AddMessageOutbox(o => o.AddMongo())
+                    .AddMongo(mongoOptions)
+                    .AddMetrics()
+                    .AddMongoRepository<RefreshTokenDocument, Guid>("refreshTokens")
+                    .AddMongoRepository<UserDocument,         Guid>("users")
+                    .AddWebApiSwaggerDocs()
+                    .AddSecurity();
+            } else {
+                return builder
                 .AddErrorHandler<ExceptionToResponseMapper>()
                 .AddQueryHandlers()
                 .AddInMemoryQueryDispatcher()
@@ -78,6 +107,7 @@ namespace TeamJob.Services.Identity.Infrastructure
                 .AddMongoRepository<UserDocument,         Guid>("users")
                 .AddWebApiSwaggerDocs()
                 .AddSecurity();
+            }
         }
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
