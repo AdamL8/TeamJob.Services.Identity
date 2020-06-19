@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Convey.Auth" Version="0.4.327" />
+    <PackageReference Include="Convey.Docs.Swagger" Version="0.4.327" />
+    <PackageReference Include="Convey.HTTP" Version="0.4.327" />
+    <PackageReference Include="Convey.MessageBrokers" Version="0.4.327" />
+    <PackageReference Include="Convey.MessageBrokers.CQRS" Version="0.4.327" />
+    <PackageReference Include="Convey.MessageBrokers.Outbox" Version="0.4.327" />
+    <PackageReference Include="Convey.MessageBrokers.Outbox.Mongo" Version="0.4.327" />
+    <PackageReference Include="Convey.MessageBrokers.RabbitMQ" Version="0.4.327" />
+    <PackageReference Include="Convey.Metrics.AppMetrics" Version="0.4.327" />
+    <PackageReference Include="Convey.Persistence.MongoDB" Version="0.4.327" />
+    <PackageReference Include="Convey.Security" Version="0.4.327" />
+    <PackageReference Include="Convey.WebApi" Version="0.4.327" />
+    <PackageReference Include="Convey.WebApi.CQRS" Version="0.4.327" />
+    <PackageReference Include="Convey.WebApi.Swagger" Version="0.4.327" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TeamJob.Services.Identity.Application\TeamJob.Services.Identity.Application.csproj" />
+    <ProjectReference Include="..\TeamJob.Services.Identity.Core\TeamJob.Services.Identity.Core.csproj" />
+  </ItemGroup>
+
+</Project>
