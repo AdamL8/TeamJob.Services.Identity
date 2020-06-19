@@ -72,7 +72,7 @@ namespace TeamJob.Services.Identity.Infrastructure
                 MongoDbOptions mongoOptions = new MongoDbOptions
                 {
                     ConnectionString = mongoConnectionString,
-                    Database = "schedule-service",
+                    Database = "identity-service",
                     Seed = false
                 };
 
