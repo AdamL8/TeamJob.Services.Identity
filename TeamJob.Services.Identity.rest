@@ -2,14 +2,16 @@
 @accessToken = secret
 @refreshToken = secret
 
-@password = secret
+# @password = sEcR3Twith8characters
+@email = chadecloca@mywrld.site
+@password = EEoTPqUOcu
 
 ###
 POST {{url}}/register
 Content-Type: application/json
 
 {
-  "email": "teamjob-user1@mailinator.com",
+  "email": "{{email}}",
   "password": "{{password}}"
 }
 
@@ -18,8 +20,8 @@ POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "teamjob-user1@mailinator.com",
-  "password": "secret"
+  "email": "{{email}}",
+  "password": "{{password}}"
 }
 
 ###

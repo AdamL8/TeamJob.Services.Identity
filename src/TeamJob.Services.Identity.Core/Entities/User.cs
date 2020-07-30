@@ -43,5 +43,10 @@ namespace TeamJob.Services.Identity.Core.Entities
             CreatedAt   = createdAt;
             Permissions = permissions ?? Enumerable.Empty<string>();
         }
+
+        public void SetNewPassword(string password)
+        {
+            Password = password;
+        }
     }
 }

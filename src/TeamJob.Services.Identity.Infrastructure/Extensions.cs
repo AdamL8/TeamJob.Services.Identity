@@ -57,7 +57,7 @@ namespace TeamJob.Services.Identity.Infrastructure
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
             builder.Services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
             builder.Services.AddTransient<IUserRepository, UserRepository>();
-            builder.Services.AddTransient<IDateTimeProvider, DateTimeProvider>();
+            builder.Services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
             builder.Services.AddTransient<IAppContextFactory, AppContextFactory>();
             builder.Services.AddTransient(ctx => ctx.GetRequiredService<IAppContextFactory>().Create());
             builder.Services.TryDecorate(typeof(ICommandHandler<>), typeof(OutboxCommandHandlerDecorator<>));
@@ -104,7 +104,8 @@ namespace TeamJob.Services.Identity.Infrastructure
                .UseMetrics()
                .UseAuthentication()
                .UseRabbitMq()
-               .SubscribeEvent<ProfileDeleted>();
+               .SubscribeEvent<ProfileDeleted>()
+               .SubscribeEvent<ResetPassword>();
 
             return app;
         }

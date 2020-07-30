@@ -38,5 +38,12 @@ namespace TeamJob.Services.Identity.Infrastructure.Mongo.Repositories
         }
 
         public async Task AddAsync(User user) => await _repository.AddAsync(user.AsDocument());
+
+        public async Task UpdateAsync(User user)
+        {
+            if (user is null)
+            { return; }
+            await _repository.UpdateAsync(user.AsDocument());
+        }
     }
 }
