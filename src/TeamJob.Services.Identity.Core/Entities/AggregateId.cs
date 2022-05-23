@@ -7,16 +7,16 @@ namespace TeamJob.Services.Identity.Core.Entities
 {
     public class AggregateId : IEquatable<AggregateId>
     {
-        public Guid Value { get; }
+        public string Value { get; }
 
         public AggregateId()
         {
-            Value = Guid.NewGuid();
+            Value = Guid.NewGuid().ToString();
         }
 
-        public AggregateId(Guid value)
+        public AggregateId(string value)
         {
-            if (value == Guid.Empty)
+            if (value == string.Empty)
             {
                 throw new InvalidAggregateIdException();
             }
@@ -48,12 +48,10 @@ namespace TeamJob.Services.Identity.Core.Entities
             return Value.GetHashCode();
         }
 
-        public static implicit operator Guid(AggregateId id)
+        public static implicit operator string(AggregateId id)
             => id.Value;
 
-        public static implicit operator AggregateId(Guid id)
+        public static implicit operator AggregateId(string id)
             => new AggregateId(id);
-
-        public override string ToString() => Value.ToString();
     }
 }

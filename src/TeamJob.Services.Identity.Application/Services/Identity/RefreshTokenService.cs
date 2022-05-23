@@ -29,7 +29,7 @@ namespace TeamJob.Services.Identity.Application.Services.Identity
             _rng                    = rng;
         }
 
-        public async Task<string> CreateAsync(Guid userId)
+        public async Task<string> CreateAsync(string userId)
         {
             var token   = _rng.Generate(30, true);
             var refreshToken = new RefreshToken(new AggregateId(), userId, token, DateTime.UtcNow);
@@ -40,7 +40,7 @@ namespace TeamJob.Services.Identity.Application.Services.Identity
 
         public async Task RevokeAsync(string refreshToken)
         {
-            var token = await _refreshTokenRepository.GetAsync(refreshToken);
+            var token = await _refreshTokenRepository.GetFromTokenAsync(refreshToken);
             if (token is null)
             {
                 throw new InvalidRefreshTokenException();
@@ -52,7 +52,7 @@ namespace TeamJob.Services.Identity.Application.Services.Identity
 
         public async Task<AuthDto> UseAsync(string refreshToken)
         {
-            var token = await _refreshTokenRepository.GetAsync(refreshToken);
+            var token = await _refreshTokenRepository.GetFromTokenAsync(refreshToken);
             if (token is null)
             {
                 throw new InvalidRefreshTokenException();

@@ -6,9 +6,9 @@ namespace TeamJob.Services.Identity.Core.Repositories
 {
     public interface IUserRepository
     {
-        Task<User> GetAsync(Guid id);
-        Task DeleteAsync(Guid id);
-        Task<User> GetAsync(string email);
+        Task<User> GetAsync(string id);
+        Task DeleteAsync(string id);
+        Task<User> GetFromEmailAsync(string email);
         Task AddAsync(User user);
     }
 }

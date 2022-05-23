@@ -8,6 +8,6 @@ namespace TeamJob.Services.Identity.Application.Queries
 {
     public class GetUser : IQuery<UserDto>
     {
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
     }
 }

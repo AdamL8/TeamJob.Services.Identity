@@ -5,9 +5,9 @@ using Convey.Types;
 
 namespace TeamJob.Services.Identity.Infrastructure.Mongo.Documents
 {
-    internal sealed class UserDocument : IIdentifiable<Guid>
+    internal sealed class UserDocument : IIdentifiable<string>
     {
-        public Guid Id                         { get; set; }
+        public string Id                         { get; set; }
         public string Email                    { get; set; }
         public string Role                     { get; set; }
         public string Password                 { get; set; }

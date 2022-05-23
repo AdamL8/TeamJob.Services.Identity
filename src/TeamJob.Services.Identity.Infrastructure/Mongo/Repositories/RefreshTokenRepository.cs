@@ -11,21 +11,21 @@ namespace TeamJob.Services.Identity.Infrastructure.Mongo.Repositories
 {
     internal sealed class RefreshTokenRepository : IRefreshTokenRepository
     {
-        private readonly IMongoRepository<RefreshTokenDocument, Guid> _repository;
+        private readonly IMongoRepository<RefreshTokenDocument, string> _repository;
 
-        public RefreshTokenRepository(IMongoRepository<RefreshTokenDocument, Guid> repository)
+        public RefreshTokenRepository(IMongoRepository<RefreshTokenDocument, string> repository)
         {
             _repository = repository;
         }
 
-        public async Task<RefreshToken> GetAsync(Guid id)
+        public async Task<RefreshToken> GetAsync(string id)
         {
             var refreshToken = await _repository.GetAsync(x => x.Id == id);
 
             return refreshToken?.AsEntity();
         }
 
-        public async Task<RefreshToken> GetAsync(string token)
+        public async Task<RefreshToken> GetFromTokenAsync(string token)
         {
             var refreshToken = await _repository.GetAsync(x => x.Token == token);
 
@@ -35,6 +35,6 @@ namespace TeamJob.Services.Identity.Infrastructure.Mongo.Repositories
         public async Task AddAsync(RefreshToken token) => await _repository.AddAsync(token.AsDocument());
 
         public async Task UpdateAsync(RefreshToken token) => await _repository.UpdateAsync(token.AsDocument());
-        public async Task DeleteAsync(Guid id) => await _repository.DeleteAsync(id);
+        public async Task DeleteAsync(string id) => await _repository.DeleteAsync(id);
     }
 }

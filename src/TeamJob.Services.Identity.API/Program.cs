@@ -53,7 +53,7 @@ namespace TeamJob.Services.Identity.API
                         .Get("api/identity/me", async ctx =>
                         {
                             var userId = await ctx.AuthenticateUsingJwtAsync();
-                            if (userId == Guid.Empty)
+                            if (userId == string.Empty)
                             {
                                 ctx.Response.StatusCode = 401;
                                 return;
@@ -92,7 +92,7 @@ namespace TeamJob.Services.Identity.API
                 .Build()
                 .RunAsync();
 
-        private static async Task GetUserAsync(Guid id, HttpContext context)
+        private static async Task GetUserAsync(string id, HttpContext context)
         {
             var user = await context.RequestServices.GetService<IIdentityService>().GetAsync(id);
             if (user is null)

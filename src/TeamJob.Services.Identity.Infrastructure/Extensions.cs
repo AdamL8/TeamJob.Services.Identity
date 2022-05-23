@@ -87,8 +87,8 @@ namespace TeamJob.Services.Identity.Infrastructure
                     .AddMessageOutbox(o => o.AddMongo())
                     .AddMongo(mongoOptions)
                     .AddMetrics()
-                    .AddMongoRepository<RefreshTokenDocument, Guid>("refreshTokens")
-                    .AddMongoRepository<UserDocument,         Guid>("users")
+                    .AddMongoRepository<RefreshTokenDocument, string>("refreshTokens")
+                    .AddMongoRepository<UserDocument,         string>("users")
                     .AddWebApiSwaggerDocs()
                     .AddSecurity();
             } else {
@@ -103,8 +103,8 @@ namespace TeamJob.Services.Identity.Infrastructure
                 .AddMessageOutbox(o => o.AddMongo())
                 .AddMongo()
                 .AddMetrics()
-                .AddMongoRepository<RefreshTokenDocument, Guid>("refreshTokens")
-                .AddMongoRepository<UserDocument,         Guid>("users")
+                .AddMongoRepository<RefreshTokenDocument, string>("refreshTokens")
+                .AddMongoRepository<UserDocument,         string>("users")
                 .AddWebApiSwaggerDocs()
                 .AddSecurity();
             }
@@ -125,11 +125,11 @@ namespace TeamJob.Services.Identity.Infrastructure
             return app;
         }
 
-        public static async Task<Guid> AuthenticateUsingJwtAsync(this HttpContext context)
+        public static async Task<string> AuthenticateUsingJwtAsync(this HttpContext context)
         {
             var authentication = await context.AuthenticateAsync(JwtBearerDefaults.AuthenticationScheme);
 
-            return authentication.Succeeded ? Guid.Parse(authentication.Principal.Identity.Name) : Guid.Empty;
+            return authentication.Succeeded ? authentication.Principal.Identity.Name : string.Empty;
         }
 
         internal static CorrelationContext GetCorrelationContext(this IHttpContextAccessor accessor)

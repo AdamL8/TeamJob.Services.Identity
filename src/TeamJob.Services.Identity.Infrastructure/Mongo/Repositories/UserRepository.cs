@@ -11,26 +11,26 @@ namespace TeamJob.Services.Identity.Infrastructure.Mongo.Repositories
 {
     internal sealed class UserRepository : IUserRepository
     {
-        private readonly IMongoRepository<UserDocument, Guid> _repository;
+        private readonly IMongoRepository<UserDocument, string> _repository;
 
-        public UserRepository(IMongoRepository<UserDocument, Guid> repository)
+        public UserRepository(IMongoRepository<UserDocument, string> repository)
         {
             _repository = repository;
         }
 
-        public async Task<User> GetAsync(Guid id)
+        public async Task<User> GetAsync(string id)
         {
             var user = await _repository.GetAsync(id);
 
             return user?.AsEntity();
         }
 
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(string id)
         {
             await _repository.DeleteAsync(id);
         }
 
-        public async Task<User> GetAsync(string email)
+        public async Task<User> GetFromEmailAsync(string email)
         {
             var user = await _repository.GetAsync(x => x.Email == email.ToLowerInvariant());
 

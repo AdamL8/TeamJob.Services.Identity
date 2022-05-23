@@ -14,7 +14,7 @@ namespace TeamJob.Services.Identity.Core.Entities
         public long CreatedAt                  { get; private set; }
         public IEnumerable<string> Permissions { get; private set; }
 
-        public User(Guid                id,
+        public User(string                id,
                     string              email,
                     string              password,
                     string              role,

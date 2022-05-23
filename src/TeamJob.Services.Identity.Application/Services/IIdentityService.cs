@@ -7,7 +7,7 @@ namespace TeamJob.Services.Identity.Application.Services
 {
     public interface IIdentityService
     {
-        Task<UserDto> GetAsync(Guid id);
+        Task<UserDto> GetAsync(string id);
         Task<AuthDto> LoginAsync(Login command);
         Task<UserDto> RegisterAsync(Register command);
     }

@@ -12,9 +12,9 @@ namespace TeamJob.Services.Identity.Infrastructure.Mongo.Queries
 {
     internal sealed class GetUserHandler : IQueryHandler<GetUser, UserDto>
     {
-        private readonly IMongoRepository<UserDocument, Guid> _userRepository;
+        private readonly IMongoRepository<UserDocument, string> _userRepository;
 
-        public GetUserHandler(IMongoRepository<UserDocument, Guid> userRepository)
+        public GetUserHandler(IMongoRepository<UserDocument, string> userRepository)
         {
             _userRepository = userRepository;
         }

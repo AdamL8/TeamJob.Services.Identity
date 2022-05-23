@@ -6,7 +6,7 @@ namespace TeamJob.Services.Identity.Application.DTO
 {
     public class AuthDto
     {
-        public Guid Id             { get; set; }
+        public string Id             { get; set; }
         public string AccessToken  { get; set; }
         public string RefreshToken { get; set; }
         public string Role         { get; set; }

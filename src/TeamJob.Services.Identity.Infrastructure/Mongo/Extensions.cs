@@ -16,7 +16,7 @@ namespace TeamJob.Services.Identity.Infrastructure.Mongo
         {
             using (var scope = builder.ApplicationServices.CreateScope())
             {
-                var users = scope.ServiceProvider.GetService<IMongoRepository<UserDocument, Guid>>().Collection;
+                var users = scope.ServiceProvider.GetService<IMongoRepository<UserDocument, string>>().Collection;
                 var userBuilder = Builders<UserDocument>.IndexKeys;
                 Task.Run(async () => await users.Indexes.CreateOneAsync(
                     new CreateIndexModel<UserDocument>(userBuilder.Ascending(i => i.Email),

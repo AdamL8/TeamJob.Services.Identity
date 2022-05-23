@@ -16,10 +16,10 @@ namespace TeamJob.Services.Identity.Infrastructure.Auth
             _jwtHandler = jwtHandler;
         }
 
-        public AuthDto Create(Guid userId, string role, string audience = null,
+        public AuthDto Create(string userId, string role, string audience = null,
             IDictionary<string, IEnumerable<string>> claims = null)
         {
-            var jwt = _jwtHandler.CreateToken(userId.ToString("N"), role, audience, claims);
+            var jwt = _jwtHandler.CreateToken(userId, role, audience, claims);
 
             return new AuthDto
             {
