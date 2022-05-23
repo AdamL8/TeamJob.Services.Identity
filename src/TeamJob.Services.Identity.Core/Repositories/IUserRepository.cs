@@ -10,5 +10,6 @@ namespace TeamJob.Services.Identity.Core.Repositories
         Task DeleteAsync(string id);
         Task<User> GetFromEmailAsync(string email);
         Task AddAsync(User user);
+        Task UpdateAsync(User user);
     }
 }

@@ -57,70 +57,55 @@ namespace TeamJob.Services.Identity.Infrastructure
             builder.Services.AddTransient<IMessageBroker, MessageBroker>();
             builder.Services.AddTransient<IRefreshTokenRepository, RefreshTokenRepository>();
             builder.Services.AddTransient<IUserRepository, UserRepository>();
-            builder.Services.AddTransient<IDateTimeProvider, DateTimeProvider>();
+            builder.Services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
             builder.Services.AddTransient<IAppContextFactory, AppContextFactory>();
             builder.Services.AddTransient(ctx => ctx.GetRequiredService<IAppContextFactory>().Create());
             builder.Services.TryDecorate(typeof(ICommandHandler<>), typeof(OutboxCommandHandlerDecorator<>));
-            builder.Services.TryDecorate(typeof(IEventHandler<>), typeof(OutboxEventHandlerDecorator<>));
+            builder.Services.TryDecorate(typeof(IEventHandler<>),   typeof(OutboxEventHandlerDecorator<>));
 
             // First check if env vars exist
-            string mongoConnectionString = Environment.GetEnvironmentVariable("IDENTITY_DATABASE_CONNECTION_STRING");
+            var mongoConnectionString = Environment.GetEnvironmentVariable("IDENTITY_DATABASE_CONNECTION_STRING");
 
-            if (mongoConnectionString != null)
+
+            // Set the mongo parameters
+            MongoDbOptions mongoOptions = new MongoDbOptions
             {
-                // Set the mongo parameters
-                MongoDbOptions mongoOptions = new MongoDbOptions
-                {
-                    ConnectionString = mongoConnectionString,
-                    Database = "identity-service",
-                    Seed = false
-                };
+                ConnectionString = mongoConnectionString,
+                Database         = "identity-service",
+                Seed             = false
+            };
 
-                return builder
-                    .AddErrorHandler<ExceptionToResponseMapper>()
-                    .AddQueryHandlers()
-                    .AddInMemoryQueryDispatcher()
-                    .AddJwt()
-                    .AddHttpClient()
-                    .AddExceptionToMessageMapper<ExceptionToMessageMapper>()
-                    .AddRabbitMq()
-                    .AddMessageOutbox(o => o.AddMongo())
-                    .AddMongo(mongoOptions)
-                    .AddMetrics()
-                    .AddMongoRepository<RefreshTokenDocument, string>("refreshTokens")
-                    .AddMongoRepository<UserDocument,         string>("users")
-                    .AddWebApiSwaggerDocs()
-                    .AddSecurity();
-            } else {
-                return builder
-                .AddErrorHandler<ExceptionToResponseMapper>()
-                .AddQueryHandlers()
-                .AddInMemoryQueryDispatcher()
-                .AddJwt()
-                .AddHttpClient()
-                .AddExceptionToMessageMapper<ExceptionToMessageMapper>()
-                .AddRabbitMq()
-                .AddMessageOutbox(o => o.AddMongo())
-                .AddMongo()
-                .AddMetrics()
-                .AddMongoRepository<RefreshTokenDocument, string>("refreshTokens")
-                .AddMongoRepository<UserDocument,         string>("users")
-                .AddWebApiSwaggerDocs()
-                .AddSecurity();
-            }
+            builder.AddErrorHandler<ExceptionToResponseMapper>()
+                   .AddQueryHandlers()
+                   .AddInMemoryQueryDispatcher()
+                   .AddJwt()
+                   .AddHttpClient()
+                   .AddExceptionToMessageMapper<ExceptionToMessageMapper>()
+                   .AddRabbitMq()
+                   .AddMessageOutbox(o => o.AddMongo())
+                   .AddMetrics()
+                   .AddMongoRepository<RefreshTokenDocument, string>("refreshTokens")
+                   .AddMongoRepository<UserDocument,         string>("users")
+                   .AddWebApiSwaggerDocs()
+                   .AddSecurity();
+
+            return mongoConnectionString is null
+                            ? builder.AddMongo()
+                            : builder.AddMongo(mongoOptions);
         }
 
         public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app)
         {
             app.UseErrorHandler()
-                .UseSwaggerDocs()
-                .UseConvey()
-                .UseAccessTokenValidator()
-                .UseMongo()
-                .UseMetrics()
-                .UseAuthentication()
-                .UseRabbitMq()
-                .SubscribeEvent<ProfileDeleted>();
+               .UseSwaggerDocs()
+               .UseConvey()
+               .UseAccessTokenValidator()
+               .UseMongo()
+               .UseMetrics()
+               .UseAuthentication()
+               .UseRabbitMq()
+               .SubscribeEvent<ProfileDeleted>()
+               .SubscribeEvent<ResetPassword>();
 
             return app;
         }

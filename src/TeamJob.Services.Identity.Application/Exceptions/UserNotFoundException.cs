@@ -6,7 +6,7 @@ namespace TeamJob.Services.Identity.Application.Exceptions
 {
     public class UserNotFoundException : AppException
     {
-        public override string Code { get; } = "user_not_found";
+        public override string Code { get; } = "service.identity.exception.user_not_found";
         public string UserId { get; }
 
         public UserNotFoundException(string userId)

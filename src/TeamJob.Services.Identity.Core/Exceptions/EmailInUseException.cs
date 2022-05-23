@@ -6,7 +6,7 @@ namespace TeamJob.Services.Identity.Core.Exceptions
 {
     public class EmailInUseException : DomainException
     {
-        public override string Code { get; } = "email_in_use";
+        public override string Code { get; } = "service.identity.exception.email_in_use";
         public string Email { get; }
 
         public EmailInUseException(string email)

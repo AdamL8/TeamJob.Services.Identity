@@ -57,14 +57,15 @@ namespace TeamJob.Services.Identity.Application.Services.Identity
 
         public async Task<AuthDto> LoginAsync(Login command)
         {
-            if (!EmailRegex.IsMatch(command.Email))
+            if (EmailRegex.IsMatch(command.Email) == false)
             {
                 _logger.LogError($"Invalid email: {command.Email}");
                 throw new InvalidEmailException(command.Email);
             }
 
             var user = await _userRepository.GetFromEmailAsync(command.Email);
-            if (user is null || _passwordService.IsValid(user.Password, command.Password) == false)
+            if (user is null)
+            
             {
                 _logger.LogError($"User with email: {command.Email} was not found.");
                 throw new InvalidCredentialsException(command.Email);
