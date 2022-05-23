@@ -7,10 +7,10 @@ namespace TeamJob.Services.Identity.Application.Events
 {
     public class LogedIn : IEvent
     {
-        public Guid UserId { get; }
+        public string UserId { get; }
         public string Role { get; }
 
-        public LogedIn(Guid userId, string role)
+        public LogedIn(string userId, string role)
         {
             UserId = userId;
             Role   = role;

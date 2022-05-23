@@ -46,7 +46,7 @@ namespace TeamJob.Services.Identity.Application.Services.Identity
             _dateTimeProvider    = dateTimeProvider;
         }
 
-        public async Task<UserDto> GetAsync(Guid id)
+        public async Task<UserDto> GetAsync(string id)
         {
             var user = await _userRepository.GetAsync(id);
 
@@ -63,8 +63,9 @@ namespace TeamJob.Services.Identity.Application.Services.Identity
                 throw new InvalidEmailException(command.Email);
             }
 
-            var user = await _userRepository.GetAsync(command.Email);
+            var user = await _userRepository.GetFromEmailAsync(command.Email);
             if (user is null)
+            
             {
                 _logger.LogError($"User with email: {command.Email} was not found.");
                 throw new InvalidCredentialsException(command.Email);
@@ -100,7 +101,7 @@ namespace TeamJob.Services.Identity.Application.Services.Identity
                 throw new InvalidEmailException(command.Email);
             }
 
-            var user = await _userRepository.GetAsync(command.Email);
+            var user = await _userRepository.GetFromEmailAsync(command.Email);
             if (user is { })
             {
                 _logger.LogError($"Email already in use: {command.Email}");
